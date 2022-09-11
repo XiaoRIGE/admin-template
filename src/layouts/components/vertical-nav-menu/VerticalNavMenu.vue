@@ -10,10 +10,7 @@
   >
     <!-- Navigation Header -->
     <div class="vertical-nav-header d-flex items-center ps-6 pe-5 pt-5 pb-2">
-      <router-link
-        to="/"
-        class="d-flex align-center text-decoration-none"
-      >
+      <router-link to="/" class="d-flex align-center text-decoration-none">
         <v-img
           :src="require('@/assets/images/logos/logo.svg')"
           max-height="30px"
@@ -25,88 +22,40 @@
         ></v-img>
         <v-slide-x-transition>
           <h2 class="app-title text--primary">
-            MATERIO
+            MB Community
           </h2>
         </v-slide-x-transition>
       </router-link>
     </div>
 
     <!-- Navigation Items -->
-    <v-list
-      expand
-      shaped
-      class="vertical-nav-menu-items pr-5"
-    >
-      <nav-menu-link
-        title="Dashboard"
-        :to="{ name: 'dashboard' }"
-        :icon="icons.mdiHomeOutline"
-      ></nav-menu-link>
+    <v-list expand shaped class="vertical-nav-menu-items pr-5">
+      <nav-menu-link title="Dashboard" :to="{ name: 'dashboard' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
       <nav-menu-link
         title="Account Settings"
-        :to="{ name: 'pages-account-settings'}"
+        :to="{ name: 'pages-account-settings' }"
         :icon="icons.mdiAccountCogOutline"
       ></nav-menu-link>
-      <nav-menu-group
-        title="Pages"
-        :icon="icons.mdiFileOutline"
-      >
-        <nav-menu-link
-          title="Login"
-          :to="{ name: 'pages-login' }"
-          target="_blank"
-        ></nav-menu-link>
-        <nav-menu-link
-          title="Register"
-          :to="{ name: 'pages-register' }"
-          target="_blank"
-        ></nav-menu-link>
-        <nav-menu-link
-          title="Error"
-          :to="{ name: 'error-404' }"
-          target="_blank"
-        ></nav-menu-link>
+
+      <nav-menu-group title="forum mgmt." :icon="icons.mdiFileOutline">
+        <nav-menu-link title="PGC list" :to="{ name: 'PGCList' }" :show-icon="false"></nav-menu-link>
+        <nav-menu-link title="UGC List" :to="{ name: 'UGClist' }" :show-icon="false"></nav-menu-link>
+        <nav-menu-link title="Topic List" :to="{ name: 'TAGlist' }" :show-icon="false"></nav-menu-link>
+        <nav-menu-link title="Tag List" :to="{ name: 'TOPIClist' }" :show-icon="false"></nav-menu-link>
       </nav-menu-group>
-      <nav-menu-section-title title="USER INTERFACE"></nav-menu-section-title>
-      <nav-menu-link
-        title="Typography"
-        :to="{ name: 'typography' }"
-        :icon="icons.mdiAlphaTBoxOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Icons"
-        :to="{ name: 'icons' }"
-        :icon="icons.mdiEyeOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Cards"
-        :to="{ name: 'cards' }"
-        :icon="icons.mdiCreditCardOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Tables"
-        :to="{ name: 'simple-table' }"
-        :icon="icons.mdiTable"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Form Layouts"
-        :to="{ name: 'form-layouts' }"
-        :icon="icons.mdiFormSelect"
-      ></nav-menu-link>
+
+      <nav-menu-group title="Pages" :icon="icons.mdiFileOutline">
+        <nav-menu-link title="Login" :to="{ name: 'pages-login' }" target="_blank"></nav-menu-link>
+        <nav-menu-link title="Register" :to="{ name: 'pages-register' }" target="_blank"></nav-menu-link>
+        <nav-menu-link title="Error" :to="{ name: 'error-404' }" target="_blank"></nav-menu-link>
+      </nav-menu-group>
+
+      <nav-menu-link title="Typography" :to="{ name: 'typography' }" :icon="icons.mdiAlphaTBoxOutline"></nav-menu-link>
+      <nav-menu-link title="Icons" :to="{ name: 'icons' }" :icon="icons.mdiEyeOutline"></nav-menu-link>
+      <nav-menu-link title="Cards" :to="{ name: 'cards' }" :icon="icons.mdiCreditCardOutline"></nav-menu-link>
+      <nav-menu-link title="Tables" :to="{ name: 'simple-table' }" :icon="icons.mdiTable"></nav-menu-link>
+      <nav-menu-link title="Form Layouts" :to="{ name: 'form-layouts' }" :icon="icons.mdiFormSelect"></nav-menu-link>
     </v-list>
-    <a
-      href="https://themeselection.com/products/materio-vuetify-vuejs-admin-template"
-      target="_blank"
-      rel="nofollow"
-    >
-      <v-img
-        :src="require(`@/assets/images/pro/upgrade-banner-${$vuetify.theme.dark ? 'dark' : 'light'}.png`)"
-        alt="upgrade-banner"
-        transition="scale-transition"
-        class="upgrade-banner mx-auto"
-        max-width="230"
-      ></v-img>
-    </a>
   </v-navigation-drawer>
 </template>
 
@@ -122,13 +71,12 @@ import {
   mdiFormSelect,
   mdiAccountCogOutline,
 } from '@mdi/js'
-import NavMenuSectionTitle from './components/NavMenuSectionTitle.vue'
+
 import NavMenuGroup from './components/NavMenuGroup.vue'
 import NavMenuLink from './components/NavMenuLink.vue'
 
 export default {
   components: {
-    NavMenuSectionTitle,
     NavMenuGroup,
     NavMenuLink,
   },
@@ -192,11 +140,35 @@ export default {
 // You can remove below style
 // Upgrade Banner
 .app-navigation-menu {
+  background-color: #0d0d0d !important;
   .upgrade-banner {
     position: absolute;
     bottom: 13px;
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+// nav menu reset
+::v-deep .v-list.v-sheet--shaped .v-list-item {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+::v-deep .v-list.v-sheet--shaped .v-list-item::before {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+::v-deep .v-list.v-sheet--shaped .v-list-item > .v-ripple__container {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+::v-deep .pr-5 {
+  padding: 0 8px !important;
+}
+// ::v-deep .v-list-item__title {
+//   margin-left: 24px;
+// }
+::v-deep .v-list-item--active {
+  background-color: rgba(230, 245, 255, 0.2);
 }
 </style>

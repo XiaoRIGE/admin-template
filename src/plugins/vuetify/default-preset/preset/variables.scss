@@ -1,5 +1,4 @@
-// Shades
-// ? We updated black value because our template design have `rgb(94, 86, 105)` as black instead of solid black
+// 阴影
 $shades: (
   'black': #5e5669,
   'white': #fff,
@@ -11,13 +10,13 @@ $primary-shade--dark: #e7e3fc;
 $shadow-color--light: $primary-shade--light;
 $shadow-color--dark: #131120;
 
-// Typography
+// 排版
 $body-font-family: 'Inter', sans-serif;
 
 @import '~vuetify/src/styles/styles.sass';
 
 // ————————————————————————————————————
-//* ——— CUSTOM VARIABLES
+//* ——— 自定义变量
 // ————————————————————————————————————
 
 $card-spacer: 20px;

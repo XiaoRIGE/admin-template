@@ -1,20 +1,11 @@
 <template>
   <v-app>
     <vertical-nav-menu :is-drawer-open.sync="isDrawerOpen"></vertical-nav-menu>
-
-    <v-app-bar
-      app
-      flat
-      absolute
-      color="transparent"
-    >
+    <v-app-bar app absolute flat color="transparent">
       <div class="boxed-container w-full">
         <div class="d-flex align-center mx-6">
           <!-- Left Content -->
-          <v-app-bar-nav-icon
-            class="d-block d-lg-none me-2"
-            @click="isDrawerOpen = !isDrawerOpen"
-          ></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon class="d-block d-lg-none me-2" @click="isDrawerOpen = !isDrawerOpen"></v-app-bar-nav-icon>
           <v-text-field
             rounded
             dense
@@ -27,7 +18,7 @@
           <v-spacer></v-spacer>
 
           <!-- Right Content -->
-          <a
+          <!-- <a
             href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free"
             target="_blank"
             rel="nofollow"
@@ -35,13 +26,9 @@
             <v-icon class="ms-6 me-4">
               {{ icons.mdiGithub }}
             </v-icon>
-          </a>
-          <theme-switcher></theme-switcher>
-          <v-btn
-            icon
-            small
-            class="ms-3"
-          >
+          </a> -->
+          <!-- <theme-switcher></theme-switcher> -->
+          <v-btn icon small class="ms-3">
             <v-icon>
               {{ icons.mdiBellOutline }}
             </v-icon>
@@ -49,6 +36,15 @@
           <app-bar-user-menu></app-bar-user-menu>
         </div>
       </div>
+      <template v-if="showBreadcrumb" v-slot:extension>
+        <v-breadcrumbs :items="breadcrumbItem">
+          <template v-slot:item="{ item }">
+            <v-breadcrumbs-item :href="item.href" :disabled="item.disabled">
+              {{ item.text.toUpperCase() }}
+            </v-breadcrumbs-item>
+          </template>
+        </v-breadcrumbs>
+      </template>
     </v-app-bar>
 
     <v-main>
@@ -57,63 +53,85 @@
       </div>
     </v-main>
 
-    <v-footer
-      app
-      inset
-      color="transparent"
-      absolute
-      height="56"
-      class="px-0"
-    >
+    <!-- <v-footer app inset color="transparent" absolute height="56" class="px-0">
       <div class="boxed-container w-full">
         <div class="mx-6 d-flex justify-space-between">
           <span>
-            &copy; 2021 <a
-              href="https://themeselection.com"
-              class="text-decoration-none"
-              target="_blank"
-            >ThemeSelection</a></span>
+            &copy; 2021
+            <a href="https://themeselection.com" class="text-decoration-none" target="_blank">ThemeSelection</a></span
+          >
           <span class="d-sm-inline d-none">
             <a
               href="https://themeselection.com/products/category/download-free-admin-templates/"
               target="_blank"
               class="me-6 text--secondary text-decoration-none"
-            >Freebies</a>
-            <a
-              href="https://themeselection.com/blog/"
-              target="_blank"
-              class="me-6 text--secondary text-decoration-none"
-            >Blog</a>
+              >Freebies</a
+            >
+            <a href="https://themeselection.com/blog/" target="_blank" class="me-6 text--secondary text-decoration-none"
+              >Blog</a
+            >
             <a
               href="https://github.com/themeselection/materio-vuetify-vuejs-admin-template-free/blob/main/LICENSE"
               target="_blank"
               class="text--secondary text-decoration-none"
-            >MIT Licence</a>
+              >MIT Licence</a
+            >
           </span>
         </div>
       </div>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
 <script>
-import { ref } from '@vue/composition-api'
+import { ref, computed } from '@vue/composition-api'
 import { mdiMagnify, mdiBellOutline, mdiGithub } from '@mdi/js'
 import VerticalNavMenu from './components/vertical-nav-menu/VerticalNavMenu.vue'
-import ThemeSwitcher from './components/ThemeSwitcher.vue'
+
+// import ThemeSwitcher from './components/ThemeSwitcher.vue'
 import AppBarUserMenu from './components/AppBarUserMenu.vue'
+import { useRouter } from '@/utils'
 
 export default {
   components: {
     VerticalNavMenu,
-    ThemeSwitcher,
+
+    // ThemeSwitcher,
     AppBarUserMenu,
   },
   setup() {
     const isDrawerOpen = ref(null)
 
+    const { route } = useRouter()
+
+    // 面包屑
+    const breadcrumbItem = [
+      {
+        text: 'Dashboard',
+        disabled: false,
+        href: '/dashboard',
+      },
+      {
+        text: 'Forum Mgmt.',
+        disabled: false,
+        href: '/forum/pgc-list',
+      },
+      {
+        text: 'UGCLIST',
+        disabled: true,
+        href: 'forum/ugc-list',
+      },
+    ]
+    const showBreadcrumb = computed(() => {
+      console.log(!route.value.meta?.hideBreadcrumbs)
+
+      return !route.value.meta?.hideBreadcrumbs
+    })
+
     return {
       isDrawerOpen,
+      breadcrumbItem,
+      showBreadcrumb,
 
       // Icons
       icons: {
@@ -140,8 +158,19 @@ export default {
 }
 
 .boxed-container {
-  max-width: 1440px;
+  // max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+//reset styles
+::v-deep .v-toolbar__extension {
+  background-color: #dddddd;
+}
+
+.v-application ::v-deep {
+  a {
+    color: #1a1a1a;
+  }
 }
 </style>

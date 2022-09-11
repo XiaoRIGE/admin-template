@@ -1,19 +1,12 @@
 <template>
-  <v-list-item
-    class="vertical-nav-menu-link"
-    v-bind="$attrs"
-    active-class="bg-gradient-primary white--text"
-  >
-    <v-list-item-icon>
-      <v-icon
-        :class="{'alternate-icon-small': !icon}"
-        class="mx-auto"
-      >
+  <v-list-item class="vertical-nav-menu-link" v-bind="$attrs" active-class="bg-gradient-primary white--text">
+    <v-list-item-icon v-if="showIcon">
+      <v-icon :class="{ 'alternate-icon-small': !icon }" class="mx-auto">
         {{ icon || alternateIcon }}
       </v-icon>
     </v-list-item-icon>
 
-    <v-list-item-title>
+    <v-list-item-title :class="showIcon ? '' : 'ml-10'">
       {{ title }}
     </v-list-item-title>
   </v-list-item>
@@ -31,6 +24,10 @@ export default {
     icon: {
       type: String,
       default: undefined,
+    },
+    showIcon: {
+      type: Boolean,
+      default: true,
     },
   },
   setup() {

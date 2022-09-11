@@ -35,6 +35,7 @@
 }
 
 // ? Inspired Vuetify Mixin: theme
+// 依据主题给内容样式
 @mixin theme--child($class) {
   .v-application.theme--light .#{$class} {
     @content ($material-light);
