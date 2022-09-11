@@ -5,15 +5,22 @@
       <div class="boxed-container w-full">
         <div class="d-flex align-center mx-6">
           <!-- Left Content -->
-          <v-app-bar-nav-icon class="d-block d-lg-none me-2" @click="isDrawerOpen = !isDrawerOpen"></v-app-bar-nav-icon>
-          <v-text-field
+          <div class="left-box">
+            <v-app-bar-nav-icon
+              class="d-block d-lg-none me-2"
+              @click="isDrawerOpen = !isDrawerOpen"
+            ></v-app-bar-nav-icon>
+            <Crumbs />
+          </div>
+          <!-- 搜索框 -->
+          <!-- <v-text-field
             rounded
             dense
             outlined
             :prepend-inner-icon="icons.mdiMagnify"
             class="app-bar-search flex-grow-0"
             hide-details
-          ></v-text-field>
+          ></v-text-field> -->
 
           <v-spacer></v-spacer>
 
@@ -87,6 +94,7 @@
 import { ref, computed } from '@vue/composition-api'
 import { mdiMagnify, mdiBellOutline, mdiGithub } from '@mdi/js'
 import VerticalNavMenu from './components/vertical-nav-menu/VerticalNavMenu.vue'
+import Crumbs from './components/Crumbs.vue'
 
 // import ThemeSwitcher from './components/ThemeSwitcher.vue'
 import AppBarUserMenu from './components/AppBarUserMenu.vue'
@@ -98,6 +106,7 @@ export default {
 
     // ThemeSwitcher,
     AppBarUserMenu,
+    Crumbs,
   },
   setup() {
     const isDrawerOpen = ref(null)

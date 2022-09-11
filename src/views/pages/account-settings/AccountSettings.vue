@@ -1,18 +1,9 @@
 <template>
   <v-card id="account-setting-card">
     <!-- tabs -->
-    <v-tabs
-      v-model="tab"
-      show-arrows
-    >
-      <v-tab
-        v-for="tab in tabs"
-        :key="tab.icon"
-      >
-        <v-icon
-          size="20"
-          class="me-3"
-        >
+    <v-tabs v-model="tab" show-arrows>
+      <v-tab v-for="tab in tabs" :key="tab.icon">
+        <v-icon size="20" class="me-3">
           {{ tab.icon }}
         </v-icon>
         <span>{{ tab.title }}</span>
@@ -38,7 +29,7 @@
 
 <script>
 import { mdiAccountOutline, mdiLockOpenOutline, mdiInformationOutline } from '@mdi/js'
-import { ref } from '@vue/composition-api'
+import { ref, onActivated } from '@vue/composition-api'
 
 // demos
 import AccountSettingsAccount from './AccountSettingsAccount.vue'
@@ -46,6 +37,7 @@ import AccountSettingsSecurity from './AccountSettingsSecurity.vue'
 import AccountSettingsInfo from './AccountSettingsInfo.vue'
 
 export default {
+  name: 'PagesAccountSettings',
   components: {
     AccountSettingsAccount,
     AccountSettingsSecurity,
@@ -53,6 +45,10 @@ export default {
   },
   setup() {
     const tab = ref('')
+
+    onActivated(() => {
+      console.log('页面激活')
+    })
 
     // tabs
     const tabs = [
@@ -73,7 +69,8 @@ export default {
         company: 'Google.inc',
       },
       information: {
-        bio: 'The name’s John Deo. I am a tireless seeker of knowledge, occasional purveyor of wisdom and also, coincidentally, a graphic designer. Algolia helps businesses across industries quickly create relevant 😎, scaLabel 😀, and lightning 😍 fast search and discovery experiences.',
+        bio:
+          'The name’s John Deo. I am a tireless seeker of knowledge, occasional purveyor of wisdom and also, coincidentally, a graphic designer. Algolia helps businesses across industries quickly create relevant 😎, scaLabel 😀, and lightning 😍 fast search and discovery experiences.',
         birthday: 'February 22, 1995',
         phone: '954-006-0844',
         website: 'https://themeselection.com/',

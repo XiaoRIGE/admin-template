@@ -33,7 +33,7 @@
       <nav-menu-link title="Dashboard" :to="{ name: 'dashboard' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
       <nav-menu-link
         title="Account Settings"
-        :to="{ name: 'pages-account-settings' }"
+        :to="{ name: 'PagesAccountSettings' }"
         :icon="icons.mdiAccountCogOutline"
       ></nav-menu-link>
 
