@@ -91,14 +91,14 @@
 </template>
 
 <script>
-import { ref, computed } from '@vue/composition-api'
+import { ref, computed } from 'vue'
 import { mdiMagnify, mdiBellOutline, mdiGithub } from '@mdi/js'
+import { useRouter } from '@/utils'
 import VerticalNavMenu from './components/vertical-nav-menu/VerticalNavMenu.vue'
 import Crumbs from './components/Crumbs.vue'
 
 // import ThemeSwitcher from './components/ThemeSwitcher.vue'
 import AppBarUserMenu from './components/AppBarUserMenu.vue'
-import { useRouter } from '@/utils'
 
 export default {
   components: {

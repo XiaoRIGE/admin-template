@@ -1,17 +1,11 @@
 <template>
   <v-form>
     <v-row>
-      <v-col
-        cols="12"
-        md="3"
-      >
+      <v-col cols="12" md="3">
         <label for="firstnameHorizontalIcons">First Name</label>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="9"
-      >
+      <v-col cols="12" md="9">
         <v-text-field
           id="firstnameHorizontalIcons"
           v-model="firstname"
@@ -23,17 +17,11 @@
         ></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="3"
-      >
+      <v-col cols="12" md="3">
         <label for="emailHorizontalIcons">Email</label>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="9"
-      >
+      <v-col cols="12" md="9">
         <v-text-field
           id="emailHorizontalIcons"
           v-model="email"
@@ -45,17 +33,11 @@
         ></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="3"
-      >
+      <v-col cols="12" md="3">
         <label for="mobileHorizontalIcons">Mobile</label>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="9"
-      >
+      <v-col cols="12" md="9">
         <v-text-field
           id="mobileHorizontalIcons"
           v-model="mobile"
@@ -68,17 +50,11 @@
         ></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="3"
-      >
+      <v-col cols="12" md="3">
         <label for="passwordHorizontalIcons">Password</label>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="9"
-      >
+      <v-col cols="12" md="9">
         <v-text-field
           id="passwordHorizontalIcons"
           v-model="password"
@@ -91,32 +67,13 @@
         ></v-text-field>
       </v-col>
 
-      <v-col
-        offset-md="3"
-        cols="12"
-      >
-        <v-checkbox
-          v-model="checkbox"
-          label="Remember me"
-          class="mt-0"
-          hide-details
-        ></v-checkbox>
+      <v-col offset-md="3" cols="12">
+        <v-checkbox v-model="checkbox" label="Remember me" class="mt-0" hide-details></v-checkbox>
       </v-col>
 
-      <v-col
-        offset-md="3"
-        cols="12"
-      >
-        <v-btn color="primary">
-          Submit
-        </v-btn>
-        <v-btn
-          type="reset"
-          outlined
-          class="mx-2"
-        >
-          Reset
-        </v-btn>
+      <v-col offset-md="3" cols="12">
+        <v-btn color="primary"> Submit </v-btn>
+        <v-btn type="reset" outlined class="mx-2"> Reset </v-btn>
       </v-col>
     </v-row>
   </v-form>
@@ -125,7 +82,7 @@
 <script>
 // eslint-disable-next-line object-curly-newline
 import { mdiAccountOutline, mdiEmailOutline, mdiCellphone, mdiLockOutline } from '@mdi/js'
-import { ref } from '@vue/composition-api'
+import { ref } from 'vue'
 
 export default {
   setup() {

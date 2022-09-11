@@ -11,23 +11,17 @@
               max-width="30px"
               alt="logo"
               contain
-              class="me-3 "
+              class="me-3"
             ></v-img>
 
-            <h2 class="text-2xl font-weight-semibold">
-              Materio
-            </h2>
+            <h2 class="text-2xl font-weight-semibold">Materio</h2>
           </router-link>
         </v-card-title>
 
         <!-- title -->
         <v-card-text>
-          <p class="text-2xl font-weight-semibold text--primary mb-2">
-            Welcome to Materio! 👋🏻
-          </p>
-          <p class="mb-2">
-            Please sign-in to your account and start the adventure
-          </p>
+          <p class="text-2xl font-weight-semibold text--primary mb-2">Welcome to Materio! 👋🏻</p>
+          <p class="mb-2">Please sign-in to your account and start the adventure</p>
         </v-card-text>
 
         <!-- login form -->
@@ -62,20 +56,14 @@
               </a> -->
             </div>
 
-            <v-btn block color="primary" class="mt-6" @click="handleLogin">
-              Login
-            </v-btn>
+            <v-btn block color="primary" class="mt-6" @click="handleLogin"> Login </v-btn>
           </v-form>
         </v-card-text>
 
         <!-- create new account  -->
         <v-card-text class="d-flex align-center justify-center flex-wrap mt-2">
-          <span class="me-2">
-            New on our platform?
-          </span>
-          <router-link :to="{ name: 'pages-register' }">
-            Create an account
-          </router-link>
+          <span class="me-2"> New on our platform? </span>
+          <router-link :to="{ name: 'pages-register' }"> Create an account </router-link>
         </v-card-text>
       </v-card>
     </div>
@@ -98,7 +86,7 @@
 <script>
 // eslint-disable-next-line object-curly-newline
 import { mdiFacebook, mdiTwitter, mdiGithub, mdiGoogle, mdiEyeOutline, mdiEyeOffOutline } from '@mdi/js'
-import { ref } from '@vue/composition-api'
+import { ref } from 'vue'
 import { useRouter } from '@/utils'
 
 export default {

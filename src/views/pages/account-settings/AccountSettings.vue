@@ -29,7 +29,7 @@
 
 <script>
 import { mdiAccountOutline, mdiLockOpenOutline, mdiInformationOutline } from '@mdi/js'
-import { ref, onActivated } from '@vue/composition-api'
+import { ref, onActivated } from 'vue'
 
 // demos
 import AccountSettingsAccount from './AccountSettingsAccount.vue'
@@ -69,8 +69,7 @@ export default {
         company: 'Google.inc',
       },
       information: {
-        bio:
-          'The name’s John Deo. I am a tireless seeker of knowledge, occasional purveyor of wisdom and also, coincidentally, a graphic designer. Algolia helps businesses across industries quickly create relevant 😎, scaLabel 😀, and lightning 😍 fast search and discovery experiences.',
+        bio: 'The name’s John Deo. I am a tireless seeker of knowledge, occasional purveyor of wisdom and also, coincidentally, a graphic designer. Algolia helps businesses across industries quickly create relevant 😎, scaLabel 😀, and lightning 😍 fast search and discovery experiences.',
         birthday: 'February 22, 1995',
         phone: '954-006-0844',
         website: 'https://themeselection.com/',

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { computed } from '@vue/composition-api'
+import { computed } from 'vue'
 import { mapState } from 'vuex'
 import { useRouter } from '@/utils'
 import LayoutBlank from '@/layouts/Blank.vue'

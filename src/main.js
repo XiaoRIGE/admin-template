@@ -1,4 +1,4 @@
-import '@/plugins/vue-composition-api'
+// import '@/plugins/index'
 import '@/styles/styles.scss'
 import Vue from 'vue'
 import App from './App.vue'

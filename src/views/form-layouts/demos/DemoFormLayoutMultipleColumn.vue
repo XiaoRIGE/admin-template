@@ -1,10 +1,7 @@
 <template>
   <v-form class="multi-col-validation">
     <v-row>
-      <v-col
-        cols="12"
-        md="6"
-      >
+      <v-col cols="12" md="6">
         <v-text-field
           v-model="firstName"
           label="First Name"
@@ -15,10 +12,7 @@
         ></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="6"
-      >
+      <v-col cols="12" md="6">
         <v-text-field
           v-model="lastName"
           label="Last Name"
@@ -29,38 +23,15 @@
         ></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="6"
-      >
-        <v-text-field
-          v-model="email"
-          label="Email"
-          outlined
-          dense
-          placeholder="Email"
-          hide-details
-        ></v-text-field>
+      <v-col cols="12" md="6">
+        <v-text-field v-model="email" label="Email" outlined dense placeholder="Email" hide-details></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="6"
-      >
-        <v-text-field
-          v-model="city"
-          label="City"
-          outlined
-          dense
-          placeholder="City"
-          hide-details
-        ></v-text-field>
+      <v-col cols="12" md="6">
+        <v-text-field v-model="city" label="City" outlined dense placeholder="City" hide-details></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="6"
-      >
+      <v-col cols="12" md="6">
         <v-text-field
           v-model="country"
           label="Country"
@@ -71,10 +42,7 @@
         ></v-text-field>
       </v-col>
 
-      <v-col
-        cols="12"
-        md="6"
-      >
+      <v-col cols="12" md="6">
         <v-text-field
           v-model="company"
           label="Company"
@@ -86,32 +54,19 @@
       </v-col>
 
       <v-col cols="12">
-        <v-checkbox
-          v-model="checkbox"
-          label="Remember me"
-          class="mt-0"
-          hide-details
-        ></v-checkbox>
+        <v-checkbox v-model="checkbox" label="Remember me" class="mt-0" hide-details></v-checkbox>
       </v-col>
 
       <v-col cols="12">
-        <v-btn color="primary">
-          Submit
-        </v-btn>
-        <v-btn
-          type="reset"
-          outlined
-          class="mx-2"
-        >
-          Reset
-        </v-btn>
+        <v-btn color="primary"> Submit </v-btn>
+        <v-btn type="reset" outlined class="mx-2"> Reset </v-btn>
       </v-col>
     </v-row>
   </v-form>
 </template>
 
 <script>
-import { ref } from '@vue/composition-api'
+import { ref } from 'vue'
 
 export default {
   setup() {
