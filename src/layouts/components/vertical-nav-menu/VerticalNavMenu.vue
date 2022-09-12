@@ -1,6 +1,9 @@
 <template>
   <v-navigation-drawer
     :value="isDrawerOpen"
+    :mini-variant="isMiniPanel"
+    :mini-variant-width="120"
+    permanent
     app
     floating
     width="260"
@@ -20,11 +23,9 @@
           eager
           class="app-logo me-3"
         ></v-img>
-        <v-slide-x-transition>
-          <h2 class="app-title text--primary">
-            MB Community
-          </h2>
-        </v-slide-x-transition>
+        <v-slide-y-transition>
+          <h2 v-show="!isMiniPanel" class="app-title">MB Community</h2>
+        </v-slide-y-transition>
       </router-link>
     </div>
 
@@ -38,7 +39,7 @@
       ></nav-menu-link>
 
       <nav-menu-group title="forum mgmt." :icon="icons.mdiFileOutline">
-        <nav-menu-link title="PGC list" :to="{ name: 'PGCList' }" :show-icon="false"></nav-menu-link>
+        <nav-menu-link title="PGC list" :to="{ name: 'PGCList' }" :icon="icons.mdiAlphaTBoxOutline"></nav-menu-link>
         <nav-menu-link title="UGC List" :to="{ name: 'UGClist' }" :show-icon="false"></nav-menu-link>
         <nav-menu-link title="Topic List" :to="{ name: 'TAGlist' }" :show-icon="false"></nav-menu-link>
         <nav-menu-link title="Tag List" :to="{ name: 'TOPIClist' }" :show-icon="false"></nav-menu-link>
@@ -85,6 +86,10 @@ export default {
       type: Boolean,
       default: null,
     },
+    isMiniPanel: {
+      type: Boolean,
+      default: false,
+    },
   },
   setup() {
     return {
@@ -105,19 +110,18 @@ export default {
 
 <style lang="scss" scoped>
 .app-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  font-stretch: normal;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.3px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #f8f8f8;
 }
 
 // ? Adjust this `translateX` value to keep logo in center when vertical nav menu is collapsed (Value depends on your logo)
 .app-logo {
   transition: all 0.18s ease-in-out;
   .v-navigation-drawer--mini-variant & {
-    transform: translateX(-4px);
+    transform: translateX(26px);
   }
 }
 

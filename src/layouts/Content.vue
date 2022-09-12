@@ -1,15 +1,13 @@
 <template>
   <v-app>
-    <vertical-nav-menu :is-drawer-open.sync="isDrawerOpen"></vertical-nav-menu>
-    <v-app-bar app absolute flat color="transparent">
+    <vertical-nav-menu :is-drawer-open.sync="isDrawerOpen" :is-mini-panel.sync="isMiniPanel"></vertical-nav-menu>
+    <v-app-bar app absolute flat color="#fff">
       <div class="boxed-container w-full">
         <div class="d-flex align-center mx-6">
           <!-- Left Content -->
-          <div class="left-box">
-            <v-app-bar-nav-icon
-              class="d-block d-lg-none me-2"
-              @click="isDrawerOpen = !isDrawerOpen"
-            ></v-app-bar-nav-icon>
+          <div class="left-box d-flex align-center">
+            <!-- d-lg-none -->
+            <v-app-bar-nav-icon class="d-block me-2" @click="isMiniPanel = !isMiniPanel"></v-app-bar-nav-icon>
             <Crumbs />
           </div>
           <!-- 搜索框 -->
@@ -109,7 +107,9 @@ export default {
     Crumbs,
   },
   setup() {
-    const isDrawerOpen = ref(null)
+    const isDrawerOpen = ref(null) // 是否展示菜单抽屉
+
+    const isMiniPanel = ref(false)
 
     const { route } = useRouter()
 
@@ -139,6 +139,7 @@ export default {
 
     return {
       isDrawerOpen,
+      isMiniPanel,
       breadcrumbItem,
       showBreadcrumb,
 
