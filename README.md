@@ -39,7 +39,7 @@
 - [√] ui 库: Vuetify
 - [×] 提交规范:git cz commitizen
 - [×] 版本更改历史: changelog
-- [×] 代码检查:eslint,格式化:prettier.提交之前检查与修复：lint-staged
+- [×] 代码检查:eslint,格式化:prettier(使用eslint-config-prettier处理冲突的规则),提交之前检查与修复：lint-staged
 - [×] webpack 插件:style-resources-loader（全局 less）webpack-bundle-analyzer（包分析工具） splitChunks（代码分离）
 
 ### Lint 配置
