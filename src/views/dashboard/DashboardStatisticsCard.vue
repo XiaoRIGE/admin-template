@@ -3,11 +3,7 @@
     <v-card-title class="align-start">
       <span class="font-weight-semibold">Statistics Card</span>
       <v-spacer></v-spacer>
-      <v-btn
-        icon
-        small
-        class="me-n3 mt-n2"
-      >
+      <v-btn icon small class="me-n3 mt-n2">
         <v-icon>
           {{ icons.mdiDotsVertical }}
         </v-icon>
@@ -15,7 +11,9 @@
     </v-card-title>
 
     <v-card-subtitle class="mb-8 mt-n5">
-      <span class="font-weight-semibold text--primary me-1">Total 48.5% Growth</span>
+      <span class="font-weight-semibold text--primary me-1">
+        Total 48.5% Growth
+      </span>
       <span>😎 this month</span>
     </v-card-subtitle>
 
@@ -30,16 +28,12 @@
         >
           <v-avatar
             size="44"
-            :color="resolveStatisticsIconVariation (data.title).color"
+            :color="resolveStatisticsIconVariation(data.title).color"
             rounded
             class="elevation-1"
           >
-            <v-icon
-              dark
-              color="white"
-              size="30"
-            >
-              {{ resolveStatisticsIconVariation (data.title).icon }}
+            <v-icon dark color="white" size="30">
+              {{ resolveStatisticsIconVariation(data.title).icon }}
             </v-icon>
           </v-avatar>
           <div class="ms-3">
@@ -58,7 +52,13 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiAccountOutline, mdiCurrencyUsd, mdiTrendingUp, mdiDotsVertical, mdiLabelOutline } from '@mdi/js'
+import {
+  mdiAccountOutline,
+  mdiCurrencyUsd,
+  mdiTrendingUp,
+  mdiDotsVertical,
+  mdiLabelOutline,
+} from '@mdi/js'
 
 export default {
   setup() {
@@ -81,9 +81,10 @@ export default {
       },
     ]
 
-    const resolveStatisticsIconVariation = data => {
+    const resolveStatisticsIconVariation = (data) => {
       if (data === 'Sales') return { icon: mdiTrendingUp, color: 'primary' }
-      if (data === 'Customers') return { icon: mdiAccountOutline, color: 'success' }
+      if (data === 'Customers')
+        return { icon: mdiAccountOutline, color: 'success' }
       if (data === 'Product') return { icon: mdiLabelOutline, color: 'warning' }
       if (data === 'Revenue') return { icon: mdiCurrencyUsd, color: 'info' }
 

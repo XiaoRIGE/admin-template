@@ -5,7 +5,7 @@
     "typescript",
     "javascriptreact",
     "vue-html",
-    "vue",
+    "vue"
   ],
   "eslint.run": "onSave",
   "eslint.format.enable": true,

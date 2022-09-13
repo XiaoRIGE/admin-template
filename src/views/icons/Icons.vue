@@ -1,17 +1,9 @@
 <template>
   <div id="icons-container">
     <div class="d-flex align-center flex-wrap">
-      <v-tooltip
-        v-for="item in iconsList"
-        :key="item.icon"
-        top
-      >
+      <v-tooltip v-for="item in iconsList" :key="item.icon" top>
         <template v-slot:activator="{ on, attrs }">
-          <v-card
-            v-bind="attrs"
-            class="icons-card mb-6 me-6"
-            v-on="on"
-          >
+          <v-card v-bind="attrs" class="icons-card mb-6 me-6" v-on="on">
             <v-card-text class="py-3 px-4">
               <v-icon size="30">
                 {{ item.icon }}
@@ -112,8 +104,14 @@ export default {
       { icon: mdiAccessPointRemove, name: 'mdiAccessPointRemove' },
       { icon: mdiAccountAlertOutline, name: 'mdiAccountAlertOutline' },
       { icon: mdiAccountArrowLeftOutline, name: 'mdiAccountArrowLeftOutline' },
-      { icon: mdiAccountArrowRightOutline, name: 'mdiAccountArrowRightOutline' },
-      { icon: mdiAccountBoxMultipleOutline, name: 'mdiAccountBoxMultipleOutline' },
+      {
+        icon: mdiAccountArrowRightOutline,
+        name: 'mdiAccountArrowRightOutline',
+      },
+      {
+        icon: mdiAccountBoxMultipleOutline,
+        name: 'mdiAccountBoxMultipleOutline',
+      },
       { icon: mdiAccountBoxOutline, name: 'mdiAccountBoxOutline' },
       { icon: mdiAccountCancelOutline, name: 'mdiAccountCancelOutline' },
       { icon: mdiAccountCashOutline, name: 'mdiAccountCashOutline' },
@@ -138,7 +136,10 @@ export default {
       { icon: mdiCloudDownloadOutline, name: 'mdiCloudDownloadOutline' },
       { icon: mdiCogOutline, name: 'mdiCogOutline' },
       { icon: mdiCompassOffOutline, name: 'mdiCompassOffOutline' },
-      { icon: mdiContactlessPaymentCircleOutline, name: 'mdiContactlessPaymentCircleOutline' },
+      {
+        icon: mdiContactlessPaymentCircleOutline,
+        name: 'mdiContactlessPaymentCircleOutline',
+      },
       { icon: mdiCrownOutline, name: 'mdiCrownOutline' },
       { icon: mdiDeleteOutline, name: 'mdiDeleteOutline' },
       { icon: mdiDiamondOutline, name: 'mdiDiamondOutline' },

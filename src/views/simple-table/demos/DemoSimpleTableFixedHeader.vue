@@ -1,33 +1,17 @@
 <template>
-  <v-simple-table
-    height="250"
-    fixed-header
-  >
+  <v-simple-table height="250" fixed-header>
     <template v-slot:default>
       <thead>
         <tr>
-          <th class="text-uppercase">
-            Dessert (100g serving)
-          </th>
-          <th class="text-center text-uppercase">
-            Calories
-          </th>
-          <th class="text-center text-uppercase">
-            Fat (g)
-          </th>
-          <th class="text-center text-uppercase">
-            Carbs (g)
-          </th>
-          <th class="text-center text-uppercase">
-            Protein (g)
-          </th>
+          <th class="text-uppercase">Dessert (100g serving)</th>
+          <th class="text-center text-uppercase">Calories</th>
+          <th class="text-center text-uppercase">Fat (g)</th>
+          <th class="text-center text-uppercase">Carbs (g)</th>
+          <th class="text-center text-uppercase">Protein (g)</th>
         </tr>
       </thead>
       <tbody>
-        <tr
-          v-for="item in desserts"
-          :key="item.dessert"
-        >
+        <tr v-for="item in desserts" :key="item.dessert">
           <td>{{ item.dessert }}</td>
           <td class="text-center">
             {{ item.calories }}

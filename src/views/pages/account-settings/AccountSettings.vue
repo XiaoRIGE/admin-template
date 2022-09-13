@@ -13,7 +13,9 @@
     <!-- tabs item -->
     <v-tabs-items v-model="tab">
       <v-tab-item>
-        <account-settings-account :account-data="accountSettingData.account"></account-settings-account>
+        <account-settings-account
+          :account-data="accountSettingData.account"
+        ></account-settings-account>
       </v-tab-item>
 
       <v-tab-item>
@@ -21,14 +23,20 @@
       </v-tab-item>
 
       <v-tab-item>
-        <account-settings-info :information-data="accountSettingData.information"></account-settings-info>
+        <account-settings-info
+          :information-data="accountSettingData.information"
+        ></account-settings-info>
       </v-tab-item>
     </v-tabs-items>
   </v-card>
 </template>
 
 <script>
-import { mdiAccountOutline, mdiLockOpenOutline, mdiInformationOutline } from '@mdi/js'
+import {
+  mdiAccountOutline,
+  mdiLockOpenOutline,
+  mdiInformationOutline,
+} from '@mdi/js'
 import { ref, onActivated } from 'vue'
 
 // demos

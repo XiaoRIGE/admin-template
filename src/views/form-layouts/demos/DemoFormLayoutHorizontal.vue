@@ -21,7 +21,14 @@
       </v-col>
 
       <v-col cols="12" md="9">
-        <v-text-field id="email" v-model="email" outlined dense placeholder="Email" hide-details></v-text-field>
+        <v-text-field
+          id="email"
+          v-model="email"
+          outlined
+          dense
+          placeholder="Email"
+          hide-details
+        ></v-text-field>
       </v-col>
 
       <v-col cols="12" md="3">
@@ -57,12 +64,17 @@
       </v-col>
 
       <v-col offset-md="3" cols="12">
-        <v-checkbox v-model="checkbox" label="Remember me" class="mt-0" hide-details></v-checkbox>
+        <v-checkbox
+          v-model="checkbox"
+          label="Remember me"
+          class="mt-0"
+          hide-details
+        ></v-checkbox>
       </v-col>
 
       <v-col offset-md="3" cols="12">
-        <v-btn color="primary"> Submit </v-btn>
-        <v-btn type="reset" class="mx-2" outlined> Reset </v-btn>
+        <v-btn color="primary">Submit</v-btn>
+        <v-btn type="reset" class="mx-2" outlined>Reset</v-btn>
       </v-col>
     </v-row>
   </v-form>

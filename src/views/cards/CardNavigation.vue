@@ -1,57 +1,30 @@
 <template>
   <v-row>
-    <v-col
-      md="6"
-      cols="12"
-    >
+    <v-col md="6" cols="12">
       <v-card>
-        <v-tabs
-          v-model="tab"
-          class="tab-index"
-        >
-          <v-tab
-            v-for="item in items"
-            :key="item"
-          >
+        <v-tabs v-model="tab" class="tab-index">
+          <v-tab v-for="item in items" :key="item">
             {{ item }}
           </v-tab>
         </v-tabs>
 
         <v-tabs-items v-model="tab">
-          <v-tab-item
-            v-for="item in items"
-            :key="item"
-            class="mt-2"
-          >
-            <v-card-title>
-              Navigation Card
-            </v-card-title>
+          <v-tab-item v-for="item in items" :key="item" class="mt-2">
+            <v-card-title>Navigation Card</v-card-title>
             <v-card-text v-text="text"></v-card-text>
 
             <v-card-text>
-              <v-btn color="primary">
-                Learn More
-              </v-btn>
+              <v-btn color="primary">Learn More</v-btn>
             </v-card-text>
           </v-tab-item>
         </v-tabs-items>
       </v-card>
     </v-col>
 
-    <v-col
-      md="6"
-      cols="12"
-    >
+    <v-col md="6" cols="12">
       <v-card>
-        <v-tabs
-          v-model="tab2"
-          centered
-          class="tab-index"
-        >
-          <v-tab
-            v-for="item in items"
-            :key="item"
-          >
+        <v-tabs v-model="tab2" centered class="tab-index">
+          <v-tab v-for="item in items" :key="item">
             {{ item }}
           </v-tab>
         </v-tabs>
@@ -68,9 +41,7 @@
             <v-card-text v-text="text"></v-card-text>
 
             <v-card-text>
-              <v-btn color="primary">
-                Learn More
-              </v-btn>
+              <v-btn color="primary">Learn More</v-btn>
             </v-card-text>
           </v-tab-item>
         </v-tabs-items>

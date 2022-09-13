@@ -46,7 +46,7 @@ export default {
       // 从 state 中的到的计算属性
       // activePath: state => state.activePath, // 已选中菜单
       // tabList: state => state.tabList, // tags菜单列表
-      catchComponents: state => state.catch_components, // keepalive缓存
+      catchComponents: (state) => state.catch_components, // keepalive缓存
     }),
   },
 }

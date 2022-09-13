@@ -1,9 +1,6 @@
 <template>
   <v-row>
-    <v-col
-      cols="12"
-      class="mb-6"
-    >
+    <v-col cols="12" class="mb-6">
       <typography-headlines></typography-headlines>
     </v-col>
     <v-col cols="12">

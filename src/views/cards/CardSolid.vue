@@ -7,16 +7,9 @@
       md="6"
       lg="4"
     >
-      <v-card
-        :color="data.cardBg"
-        dark
-      >
+      <v-card :color="data.cardBg" dark>
         <v-card-title>
-          <v-icon
-            size="1.5rem"
-            color="white"
-            class="me-2"
-          >
+          <v-icon size="1.5rem" color="white" class="me-2">
             {{ data.icon }}
           </v-icon>
           <span class="white--text">{{ data.title }}</span>
@@ -29,25 +22,19 @@
         <v-card-actions class="justify-space-between">
           <div>
             <v-avatar size="34">
-              <v-img :src="require(`@/assets/images/avatars/${data.avatarImg}`)"></v-img>
+              <v-img
+                :src="require(`@/assets/images/avatars/${data.avatarImg}`)"
+              ></v-img>
             </v-avatar>
             <span class="white--text ms-2">{{ data.avatarName }}</span>
           </div>
 
           <div class="white--text">
-            <v-icon
-              class="me-1"
-              color="white"
-              size="1rem"
-            >
+            <v-icon class="me-1" color="white" size="1rem">
               {{ icons.mdiHeart }}
             </v-icon>
             <span class="text-sm me-4">{{ data.likes }}</span>
-            <v-icon
-              class="me-1"
-              color="white"
-              size="1rem"
-            >
+            <v-icon class="me-1" color="white" size="1rem">
               {{ icons.mdiShareVariant }}
             </v-icon>
             <span class="text-sm">{{ data.share }}</span>
@@ -60,7 +47,13 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiTwitter, mdiHeart, mdiShareVariant, mdiFacebook, mdiLinkedin } from '@mdi/js'
+import {
+  mdiTwitter,
+  mdiHeart,
+  mdiShareVariant,
+  mdiFacebook,
+  mdiLinkedin,
+} from '@mdi/js'
 
 export default {
   setup() {

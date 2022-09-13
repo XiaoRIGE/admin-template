@@ -1,5 +1,9 @@
 <template>
-  <v-list-item class="vertical-nav-menu-link" v-bind="$attrs" active-class="bg-gradient-primary white--text">
+  <v-list-item
+    class="vertical-nav-menu-link"
+    v-bind="$attrs"
+    active-class="bg-gradient-primary white--text"
+  >
     <v-list-item-icon v-if="showIcon">
       <v-icon :class="{ 'alternate-icon-small': !icon }" class="mx-auto">
         {{ icon || alternateIcon }}

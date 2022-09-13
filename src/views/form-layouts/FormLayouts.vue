@@ -1,10 +1,7 @@
 <template>
   <v-row class="match-height">
     <!-- horizontal -->
-    <v-col
-      cols="12"
-      md="6"
-    >
+    <v-col cols="12" md="6">
       <v-card>
         <v-card-title>Horizontal Form</v-card-title>
         <v-card-text>
@@ -14,10 +11,7 @@
     </v-col>
 
     <!-- horizontal form with icons -->
-    <v-col
-      cols="12"
-      md="6"
-    >
+    <v-col cols="12" md="6">
       <v-card>
         <v-card-title>Horizontal Form with Icons</v-card-title>
         <v-card-text>
@@ -27,10 +21,7 @@
     </v-col>
 
     <!-- Vertical Form -->
-    <v-col
-      cols="12"
-      md="6"
-    >
+    <v-col cols="12" md="6">
       <v-card>
         <v-card-title>Vertical Form</v-card-title>
         <v-card-text>
@@ -40,10 +31,7 @@
     </v-col>
 
     <!-- vertical form icons -->
-    <v-col
-      cols="12"
-      md="6"
-    >
+    <v-col cols="12" md="6">
       <v-card>
         <v-card-title>Vertical Form with Icons</v-card-title>
         <v-card-text>

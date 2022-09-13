@@ -64,7 +64,7 @@ export default new Vuex.Store({
       const oldTabList = state.tabList
 
       // 将菜单信息添加到tablist - 添加时判断是否已有该路由标签
-      const result = oldTabList.some(item => {
+      const result = oldTabList.some((item) => {
         if (item.name === activePath) {
           // console.log('--------', item.fullPath != submenu.fullPath)
           // 有该路由标签是否为多次点击(相当于查看同路由下的详情，该过程只改变了参数)

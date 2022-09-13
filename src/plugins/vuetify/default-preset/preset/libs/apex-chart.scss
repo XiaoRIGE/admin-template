@@ -5,17 +5,21 @@
 @include theme--child('apexcharts-canvas .apexcharts-text') using ($material) {
   fill: map-deep-get($material, 'text', 'white');
 }
-@include theme--child('apexcharts-canvas .apexcharts-tooltip-text') using ($material) {
+@include theme--child('apexcharts-canvas .apexcharts-tooltip-text') using
+  ($material) {
   fill: map-deep-get($material, 'text', 'secondary');
 }
-@include theme--child('apexcharts-canvas .apexcharts-datalabel-label') using ($material) {
+@include theme--child('apexcharts-canvas .apexcharts-datalabel-label') using
+  ($material) {
   fill: map-deep-get($material, 'text', 'secondary');
 }
-@include theme--child('apexcharts-canvas .apexcharts-datalabel') using ($material) {
+@include theme--child('apexcharts-canvas .apexcharts-datalabel') using
+  ($material) {
   fill: map-deep-get($material, 'text', 'secondary');
 }
 
-@include theme--child('apexcharts-canvas .apexcharts-bar-area') using ($material) {
+@include theme--child('apexcharts-canvas .apexcharts-bar-area') using
+  ($material) {
   stroke: map-deep-get($material, 'cards');
 }
 

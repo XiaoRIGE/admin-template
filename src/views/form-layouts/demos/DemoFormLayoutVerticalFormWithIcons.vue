@@ -39,16 +39,25 @@
       placeholder="password"
     ></v-text-field>
 
-    <v-checkbox v-model="checkbox" label="Remember me" class="mt-0"></v-checkbox>
+    <v-checkbox
+      v-model="checkbox"
+      label="Remember me"
+      class="mt-0"
+    ></v-checkbox>
 
-    <v-btn color="primary"> Submit </v-btn>
-    <v-btn type="reset" outlined class="mx-2"> Reset </v-btn>
+    <v-btn color="primary">Submit</v-btn>
+    <v-btn type="reset" outlined class="mx-2">Reset</v-btn>
   </v-form>
 </template>
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiAccountOutline, mdiEmailOutline, mdiCellphone, mdiLockOutline } from '@mdi/js'
+import {
+  mdiAccountOutline,
+  mdiEmailOutline,
+  mdiCellphone,
+  mdiLockOutline,
+} from '@mdi/js'
 import { ref } from 'vue'
 
 export default {

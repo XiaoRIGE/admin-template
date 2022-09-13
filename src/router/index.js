@@ -70,7 +70,8 @@ const routes = [
   {
     path: '/pages/account-settings',
     name: 'PagesAccountSettings',
-    component: () => import('@/views/pages/account-settings/AccountSettings.vue'),
+    component: () =>
+      import('@/views/pages/account-settings/AccountSettings.vue'),
   },
   {
     path: '/pages/login',

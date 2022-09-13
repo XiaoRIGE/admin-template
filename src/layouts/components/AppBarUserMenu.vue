@@ -16,11 +16,7 @@
         class="ms-4"
         dot
       >
-        <v-avatar
-          size="40px"
-          v-bind="attrs"
-          v-on="on"
-        >
+        <v-avatar size="40px" v-bind="attrs" v-on="on">
           <v-img :src="require('@/assets/images/avatars/1.png')"></v-img>
         </v-avatar>
       </v-badge>
@@ -42,11 +38,9 @@
         </v-badge>
         <div
           class="d-inline-flex flex-column justify-center ms-3"
-          style="vertical-align:middle"
+          style="vertical-align: middle"
         >
-          <span class="text--primary font-weight-semibold mb-n1">
-            John Doe
-          </span>
+          <span class="text--primary font-weight-semibold mb-n1">John Doe</span>
           <small class="text--disabled text-capitalize">Admin</small>
         </div>
       </div>
@@ -89,12 +83,7 @@
         </v-list-item-content>
 
         <v-list-item-action>
-          <v-badge
-            inline
-            color="error"
-            content="2"
-          >
-          </v-badge>
+          <v-badge inline color="error" content="2"></v-badge>
         </v-list-item-action>
       </v-list-item>
 

@@ -11,9 +11,9 @@ export const useRouter = () => {
 
   watch(
     () => vm.$route,
-    r => {
+    (r) => {
       state.route = r
-    },
+    }
   )
 
   return { ...toRefs(state), router: vm.$router }

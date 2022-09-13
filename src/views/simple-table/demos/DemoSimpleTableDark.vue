@@ -3,28 +3,15 @@
     <template v-slot:default>
       <thead>
         <tr>
-          <th class="text-uppercase text--primary">
-            Dessert (100g serving)
-          </th>
-          <th class="text-center text-uppercase text--primary">
-            Calories
-          </th>
-          <th class="text-center text-uppercase text--primary">
-            Fat (g)
-          </th>
-          <th class="text-center text-uppercase text--primary">
-            Carbs (g)
-          </th>
-          <th class="text-center text-uppercase text--primary">
-            Protein (g)
-          </th>
+          <th class="text-uppercase text--primary">Dessert (100g serving)</th>
+          <th class="text-center text-uppercase text--primary">Calories</th>
+          <th class="text-center text-uppercase text--primary">Fat (g)</th>
+          <th class="text-center text-uppercase text--primary">Carbs (g)</th>
+          <th class="text-center text-uppercase text--primary">Protein (g)</th>
         </tr>
       </thead>
       <tbody>
-        <tr
-          v-for="item in desserts"
-          :key="item.dessert"
-        >
+        <tr v-for="item in desserts" :key="item.dessert">
           <td>{{ item.dessert }}</td>
           <td class="text-center">
             {{ item.calories }}

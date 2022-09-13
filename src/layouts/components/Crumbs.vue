@@ -14,7 +14,13 @@
             @click="changeMenu(tab)"
           >
             {{ tab.label }}
-            <span v-show="tabList.length > 1" class="close-icon" @click="handleClose(tab, index)">X</span>
+            <span
+              v-show="tabList.length > 1"
+              class="close-icon"
+              @click="handleClose(tab, index)"
+            >
+              X
+            </span>
           </v-btn>
         </div>
       </div>
@@ -37,9 +43,9 @@ export default {
   computed: {
     ...mapState({
       // 从 state 中的到的计算属性
-      activePath: state => state.activePath, // 已选中菜单
-      tabList: state => state.tabList, // tags菜单列表
-      catch_components: state => state.catch_components, // keepalive缓存
+      activePath: (state) => state.activePath, // 已选中菜单
+      tabList: (state) => state.tabList, // tags菜单列表
+      catch_components: (state) => state.catch_components, // keepalive缓存
     }),
   },
 

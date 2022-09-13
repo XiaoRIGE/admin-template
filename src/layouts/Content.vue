@@ -1,13 +1,19 @@
 <template>
   <v-app>
-    <vertical-nav-menu :is-drawer-open.sync="isDrawerOpen" :is-mini-panel.sync="isMiniPanel"></vertical-nav-menu>
+    <vertical-nav-menu
+      :is-drawer-open.sync="isDrawerOpen"
+      :is-mini-panel.sync="isMiniPanel"
+    ></vertical-nav-menu>
     <v-app-bar app absolute flat color="#fff">
       <div class="boxed-container w-full">
         <div class="d-flex align-center mx-6">
           <!-- Left Content -->
           <div class="left-box d-flex align-center">
             <!-- d-lg-none -->
-            <v-app-bar-nav-icon class="d-block me-2" @click="isMiniPanel = !isMiniPanel"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon
+              class="d-block me-2"
+              @click="isMiniPanel = !isMiniPanel"
+            ></v-app-bar-nav-icon>
             <Crumbs />
           </div>
           <!-- 搜索框 -->

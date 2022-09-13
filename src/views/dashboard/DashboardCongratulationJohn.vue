@@ -14,12 +14,7 @@
               $42.8k
             </p>
 
-            <v-btn
-              small
-              color="primary"
-            >
-              View Sales
-            </v-btn>
+            <v-btn small color="primary">View Sales</v-btn>
           </div>
         </v-card-text>
       </v-col>
@@ -29,7 +24,11 @@
           contain
           height="180"
           width="159"
-          :src="require(`@/assets/images/misc/triangle-${$vuetify.theme.dark ? 'dark':'light'}.png`)"
+          :src="
+            require(`@/assets/images/misc/triangle-${
+              $vuetify.theme.dark ? 'dark' : 'light'
+            }.png`)
+          "
           class="greeting-card-bg"
         ></v-img>
         <v-img

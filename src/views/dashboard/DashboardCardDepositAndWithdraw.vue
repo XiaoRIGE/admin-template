@@ -11,9 +11,9 @@
         <v-card-text>
           <v-list>
             <v-list-item
-              v-for="(data,index) in deposit"
+              v-for="(data, index) in deposit"
               :key="data.img"
-              :class="`d-flex px-0 ${index > 0 ? 'mt-4':''}`"
+              :class="`d-flex px-0 ${index > 0 ? 'mt-4' : ''}`"
             >
               <v-img
                 contain
@@ -31,7 +31,9 @@
                   <span class="text-xs">{{ data.subtitle }}</span>
                 </div>
 
-                <span class="font-weight-semibold success--text">{{ data.amount }}</span>
+                <span class="font-weight-semibold success--text">
+                  {{ data.amount }}
+                </span>
               </div>
             </v-list-item>
           </v-list>
@@ -53,9 +55,9 @@
         <v-card-text>
           <v-list>
             <v-list-item
-              v-for="(data,index) in withdraw"
+              v-for="(data, index) in withdraw"
               :key="data.img"
-              :class="`d-flex px-0 ${index > 0 ? 'mt-4':''}`"
+              :class="`d-flex px-0 ${index > 0 ? 'mt-4' : ''}`"
             >
               <v-img
                 max-height="30"
@@ -72,7 +74,9 @@
                   <span class="text-xs">{{ data.subtitle }}</span>
                 </div>
 
-                <span class="font-weight-semibold error--text">{{ data.amount }}</span>
+                <span class="font-weight-semibold error--text">
+                  {{ data.amount }}
+                </span>
               </div>
             </v-list-item>
           </v-list>

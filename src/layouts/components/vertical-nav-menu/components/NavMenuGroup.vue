@@ -4,7 +4,7 @@
     class="vertical-nav-menu-group text--primary"
   >
     <template #prependIcon>
-      <v-icon :class="{'alternate-icon-small': !icon}">
+      <v-icon :class="{ 'alternate-icon-small': !icon }">
         {{ icon }}
       </v-icon>
     </template>
@@ -55,7 +55,10 @@ export default {
 
   @include theme(v-list-group__header) using ($material) {
     &.v-list-item--active {
-      background-color: rgba(map-deep-get($material, 'text', 'primary'), map-deep-get($material, 'states', 'selected'));
+      background-color: rgba(
+        map-deep-get($material, 'text', 'primary'),
+        map-deep-get($material, 'states', 'selected')
+      );
     }
   }
 
@@ -64,7 +67,10 @@ export default {
       transform: rotate(-90deg);
     }
 
-    &.v-list-group--active > .v-list-group__header > .v-list-group__header__append-icon .v-icon {
+    &.v-list-group--active
+      > .v-list-group__header
+      > .v-list-group__header__append-icon
+      .v-icon {
       transform: none;
     }
   }

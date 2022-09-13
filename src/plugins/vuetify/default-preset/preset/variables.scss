@@ -125,14 +125,14 @@ $material-light: map-deep-merge(
     'calendar': (
       'line-color': rgba(93, 89, 98, 0.1),
       // ! Value of `map-deep-get($material-dark, 'cards')`
-        'outside-background-color': transparent,
+      'outside-background-color': transparent,
     ),
     'chips': rgba($primary-shade--light, 0.06),
     'dividers': rgba($primary-shade--light, 0.14),
     'input-bottom-line': rgba($primary-shade--light, 0.14),
     'inputs': (
       // ! Value of `map-deep-get($material-light, 'text-fields', 'filled')`
-        'solo-inverted': rgba($primary-shade--light, 0.03),
+      'solo-inverted': rgba($primary-shade--light, 0.03),
     ),
     'table': (
       'active': rgba($primary-shade--light, 0.08),
@@ -163,10 +163,10 @@ $material-light: map-deep-merge(
     ),
     'icons': (
       // ! Value of `map-deep-get($material-light, 'text', 'secondary')`
-        'active': rgba($primary-shade--light, 0.68),
+      'active': rgba($primary-shade--light, 0.68),
     ),
     // * New
-      'primary-shade': $primary-shade--light,
+    'primary-shade': $primary-shade--light,
     'shadow-color': $shadow-color--light,
   )
 );
@@ -264,25 +264,25 @@ $material-dark: map-deep-merge(
   $material-dark,
   (
     // ! Value of `map-deep-get($material-dark, 'cards')`
-      'app-bar': #312d4b,
+    'app-bar': #312d4b,
     'background': #28243d,
     'cards': #312d4b,
     'calendar': (
       // ! Value of `map-deep-get($material-dark, 'cards')`
-        'background-color': #312d4b,
+      'background-color': #312d4b,
       'line-color': rgba(247, 244, 254, 0.14),
       // ! Value of `map-deep-get($material-dark, 'cards')`
-        'outside-background-color': transparent
+      'outside-background-color': transparent
     ),
     'chips': rgba($primary-shade--dark, 0.06),
     'dividers': rgba($primary-shade--dark, 0.14),
     'input-bottom-line': rgba($primary-shade--dark, 0.14),
     'inputs': (
       // ! Value of `map-deep-get($material-dark, 'text-fields', 'filled')`
-        'solo-inverted': rgba($primary-shade--dark, 0.03)
+      'solo-inverted': rgba($primary-shade--dark, 0.03)
     ),
     // ! Value of `map-deep-get($material-dark, 'cards')`
-      'navigation-drawer': #312d4b,
+    'navigation-drawer': #312d4b,
     'table': (
       'active': rgba($primary-shade--dark, 0.08),
       'hover': rgba($primary-shade--dark, 0.04),
@@ -291,7 +291,7 @@ $material-dark: map-deep-merge(
     'tabs': rgba($primary-shade--dark, 0.76),
     'text': (
       // ! It is only used in pagination
-        'theme': map-get($shades, 'white'),
+      'theme': map-get($shades, 'white'),
       'primary': rgba($primary-shade--dark, 0.87),
       'secondary': rgba($primary-shade--dark, 0.68)
     ),
@@ -309,24 +309,24 @@ $material-dark: map-deep-merge(
     ),
     'status-bar': (
       // ! Value of `map-deep-get($material-dark, 'cards')`
-        'regular': #312d4b
+      'regular': #312d4b
     ),
     'icons': (
       // ! Value of `map-deep-get($material-light, 'text', 'secondary')`
-        'active': rgba($primary-shade--dark, 0.68)
+      'active': rgba($primary-shade--dark, 0.68)
     ),
     'picker': (
       // ! Value of `map-deep-get($material-dark, 'background')`
-        'body': #28243d,
+      'body': #28243d,
       // ! Value of `map-deep-get($material-dark, 'cards')`
-        'clock': #312d4b,
+      'clock': #312d4b,
       // ! Value of `map-deep-get($material-dark, 'background')`
-        'indeterminateTime': #28243d
+      'indeterminateTime': #28243d
     ),
     // ! Value of `map-deep-get($material-dark, 'cards')`
-      'bg-color': #312d4b,
+    'bg-color': #312d4b,
     // * New
-      'primary-shade': $primary-shade--dark,
+    'primary-shade': $primary-shade--dark,
     'shadow-color': $shadow-color--dark
   )
 );

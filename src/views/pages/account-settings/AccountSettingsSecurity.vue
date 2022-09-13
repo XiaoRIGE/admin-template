@@ -9,18 +9,28 @@
               <v-text-field
                 v-model="currentPassword"
                 :type="isCurrentPasswordVisible ? 'text' : 'password'"
-                :append-icon="isCurrentPasswordVisible ? icons.mdiEyeOffOutline : icons.mdiEyeOutline"
+                :append-icon="
+                  isCurrentPasswordVisible
+                    ? icons.mdiEyeOffOutline
+                    : icons.mdiEyeOutline
+                "
                 label="Current Password"
                 outlined
                 dense
-                @click:append="isCurrentPasswordVisible = !isCurrentPasswordVisible"
+                @click:append="
+                  isCurrentPasswordVisible = !isCurrentPasswordVisible
+                "
               ></v-text-field>
 
               <!-- new password -->
               <v-text-field
                 v-model="newPassword"
                 :type="isNewPasswordVisible ? 'text' : 'password'"
-                :append-icon="isNewPasswordVisible ? icons.mdiEyeOffOutline : icons.mdiEyeOutline"
+                :append-icon="
+                  isNewPasswordVisible
+                    ? icons.mdiEyeOffOutline
+                    : icons.mdiEyeOutline
+                "
                 label="New Password"
                 outlined
                 dense
@@ -33,7 +43,11 @@
               <v-text-field
                 v-model="cPassword"
                 :type="isCPasswordVisible ? 'text' : 'password'"
-                :append-icon="isCPasswordVisible ? icons.mdiEyeOffOutline : icons.mdiEyeOutline"
+                :append-icon="
+                  isCPasswordVisible
+                    ? icons.mdiEyeOffOutline
+                    : icons.mdiEyeOutline
+                "
                 label="Confirm New Password"
                 outlined
                 dense
@@ -42,7 +56,12 @@
               ></v-text-field>
             </v-col>
 
-            <v-col cols="12" sm="4" md="6" class="d-none d-sm-flex justify-center position-relative">
+            <v-col
+              cols="12"
+              sm="4"
+              md="6"
+              class="d-none d-sm-flex justify-center position-relative"
+            >
               <v-img
                 contain
                 max-width="170"
@@ -71,17 +90,20 @@
               {{ icons.mdiLockOpenOutline }}
             </v-icon>
           </v-avatar>
-          <p class="text-base text--primary font-weight-semibold">Two factor authentication is not enabled yet.</p>
+          <p class="text-base text--primary font-weight-semibold">
+            Two factor authentication is not enabled yet.
+          </p>
           <p class="text-sm text--primary">
-            Two-factor authentication adds an additional layer of security to your account by requiring more than just a
-            password to log in. Learn more.
+            Two-factor authentication adds an additional layer of security to
+            your account by requiring more than just a password to log in. Learn
+            more.
           </p>
         </v-card-text>
 
         <!-- action buttons -->
         <v-card-text>
-          <v-btn color="primary" class="me-3 mt-3"> Save changes </v-btn>
-          <v-btn color="secondary" outlined class="mt-3"> Cancel </v-btn>
+          <v-btn color="primary" class="me-3 mt-3">Save changes</v-btn>
+          <v-btn color="secondary" outlined class="mt-3">Cancel</v-btn>
         </v-card-text>
       </div>
     </v-form>
@@ -90,7 +112,12 @@
 
 <script>
 // eslint-disable-next-line object-curly-newline
-import { mdiKeyOutline, mdiLockOpenOutline, mdiEyeOffOutline, mdiEyeOutline } from '@mdi/js'
+import {
+  mdiKeyOutline,
+  mdiLockOpenOutline,
+  mdiEyeOffOutline,
+  mdiEyeOutline,
+} from '@mdi/js'
 import { ref } from 'vue'
 
 export default {

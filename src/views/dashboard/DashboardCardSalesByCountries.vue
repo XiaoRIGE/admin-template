@@ -5,11 +5,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        icon
-        small
-        class="me-n3 mt-n2"
-      >
+      <v-btn icon small class="me-n3 mt-n2">
         <v-icon>
           {{ icons.mdiDotsVertical }}
         </v-icon>
@@ -19,9 +15,9 @@
     <v-card-text>
       <v-list class="pb-0">
         <v-list-item
-          v-for="(data,index) in salesByCountries"
+          v-for="(data, index) in salesByCountries"
           :key="data.country"
-          :class="`d-flex align-center px-0 ${index > 0 ? 'mt-4':''}`"
+          :class="`d-flex align-center px-0 ${index > 0 ? 'mt-4' : ''}`"
         >
           <v-avatar
             :color="data.color"
@@ -34,16 +30,30 @@
           <div class="d-flex align-center flex-grow-1 flex-wrap">
             <div class="me-2">
               <div class="font-weight-semibold">
-                <span class="text--primary text-base me-1">{{ data.amount }}</span>
+                <span class="text--primary text-base me-1">
+                  {{ data.amount }}
+                </span>
 
                 <v-icon
                   size="20"
-                  :color="data.change.charAt(0) === '+' ? 'success':'error'"
+                  :color="data.change.charAt(0) === '+' ? 'success' : 'error'"
                 >
-                  {{ data.change.charAt(0) === '+' ? icons.mdiChevronUp: icons.mdiChevronDown }}
+                  {{
+                    data.change.charAt(0) === '+'
+                      ? icons.mdiChevronUp
+                      : icons.mdiChevronDown
+                  }}
                 </v-icon>
 
-                <span :class="`text-xs ${data.change.charAt(0) === '+' ? 'success--text':'error--text'}`">{{ data.change.slice(1) }}</span>
+                <span
+                  :class="`text-xs ${
+                    data.change.charAt(0) === '+'
+                      ? 'success--text'
+                      : 'error--text'
+                  }`"
+                >
+                  {{ data.change.slice(1) }}
+                </span>
               </div>
 
               <v-list-item-subtitle class="text-xs">
