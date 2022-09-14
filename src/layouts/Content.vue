@@ -48,7 +48,7 @@
         </div>
       </div>
       <template v-if="showBreadcrumb" v-slot:extension>
-        <v-breadcrumbs :items="breadcrumbItem">
+        <v-breadcrumbs :items="breadcrumbItem" class="breadcrumb">
           <template v-slot:item="{ item }">
             <v-breadcrumbs-item :href="item.href" :disabled="item.disabled">
               {{ item.text.toUpperCase() }}
@@ -161,7 +161,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.v-app-bar ::v-deep {
+:deep(.v-app-bar) {
   .v-toolbar__content {
     padding: 0;
 
@@ -180,13 +180,10 @@ export default {
 }
 
 //reset styles
-::v-deep .v-toolbar__extension {
+:deep(.v-toolbar__extension) {
   background-color: #dddddd;
 }
-
-.v-application ::v-deep {
-  a {
-    color: #1a1a1a;
-  }
+:deep(.breadcrumb a) {
+  color: #1a1a1a;
 }
 </style>

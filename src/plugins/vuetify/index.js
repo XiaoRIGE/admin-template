@@ -13,7 +13,7 @@ export default new Vuetify({
   },
   theme: {
     options: {
-      customProperties: true,
+      customProperties: true, // 启用 customProperties 也会为每个主题颜色生成一个 css变量
       variations: false,
     },
   },

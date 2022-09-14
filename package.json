@@ -44,9 +44,12 @@
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "postcss-sass": "^0.5.0",
     "prettier": "^2.7.1",
     "sass": "~1.32.0",
     "sass-loader": "^10.0.0",
+    "stylelint": "^14.11.0",
+    "stylelint-config-standard-scss": "^5.0.0",
     "vue-cli-plugin-vuetify": "~2.4.2",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0"
@@ -57,8 +60,9 @@
     }
   },
   "lint-staged": {
-    "*.{scss,vue}": [
-      "stylelint --fix"
+    "packages/**/*.{scss,sass}": [
+      "stylelint --fix",
+      "prettier --write"
     ],
     "*.{js,ts,vue}": [
       "vue-cli-service lint"

@@ -181,10 +181,21 @@ export default {
   background-color: map-deep-get($material, 'background');
 }
 
+// .app-navigation-menu {
+//   .v-list-item {
+//     &.vertical-nav-menu-link {
+//       ::v-deep .v-list-item__icon {
+//         .v-icon {
+//           transition: none !important;
+//         }
+//       }
+//     }
+//   }
+// }
 .app-navigation-menu {
   .v-list-item {
     &.vertical-nav-menu-link {
-      ::v-deep .v-list-item__icon {
+      :deep(.v-list-item__icon) {
         .v-icon {
           transition: none !important;
         }
@@ -206,25 +217,36 @@ export default {
 }
 
 // nav menu reset
-::v-deep .v-list.v-sheet--shaped .v-list-item {
-  border-bottom-right-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+:deep(.v-list.v-sheet--shaped) {
+  .v-list-item,
+  .v-list-item::before,
+  .v-list-item > .v-ripple__container {
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
 }
-::v-deep .v-list.v-sheet--shaped .v-list-item::before {
-  border-bottom-right-radius: 0 !important;
-  border-top-right-radius: 0 !important;
+:deep(.v-list-item--active) {
+  background-color: rgba(230, 245, 255, 0.2);
 }
-::v-deep .v-list.v-sheet--shaped .v-list-item > .v-ripple__container {
-  border-bottom-right-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-}
-::v-deep .pr-5 {
+:deep(.pr-5) {
   padding: 0 8px !important;
 }
+// ::v-deep .v-list.v-sheet--shaped .v-list-item {
+//   border-bottom-right-radius: 0 !important;
+//   border-top-right-radius: 0 !important;
+// }
+// ::v-deep .v-list.v-sheet--shaped .v-list-item::before {
+//   border-bottom-right-radius: 0 !important;
+//   border-top-right-radius: 0 !important;
+// }
+// ::v-deep .v-list.v-sheet--shaped .v-list-item > .v-ripple__container {
+//   border-bottom-right-radius: 0 !important;
+//   border-top-right-radius: 0 !important;
+// }
+// ::v-deep .pr-5 {
+//   padding: 0 8px !important;
+// }
 // ::v-deep .v-list-item__title {
 //   margin-left: 24px;
 // }
-::v-deep .v-list-item--active {
-  background-color: rgba(230, 245, 255, 0.2);
-}
 </style>
