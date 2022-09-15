@@ -16,5 +16,17 @@ export default new Vuetify({
       customProperties: true, // 启用 customProperties 也会为每个主题颜色生成一个 css变量
       variations: false,
     },
+    themes: {
+      // 自定义主题色
+      light: {
+        primary: '#0078D6',
+        secondary: '#4EAFFD',
+        // accent: '#82B1FF',
+        error: '#D92121',
+        // info: '#2196F3',
+        // success: '#4CAF50',
+        // warning: '#FFC107',
+      },
+    },
   },
 })

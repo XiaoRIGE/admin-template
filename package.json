@@ -7,6 +7,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:modern": "vue-cli-service build --modern",
     "lint": "vue-cli-service lint",
     "fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "prettier": "npx prettier --write .",
@@ -54,7 +55,8 @@
     "stylelint-config-standard-scss": "^5.0.0",
     "vue-cli-plugin-vuetify": "~2.4.2",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.7.0"
+    "vuetify-loader": "^1.7.0",
+    "webpack-bundle-analyzer": "^4.6.1"
   },
   "config": {
     "commitizen": {
