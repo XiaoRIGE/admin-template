@@ -46,7 +46,7 @@
 
 - [√] eslint
 - [√] prettier
-- [×] style Lint (配置过程中发现包依赖问题)
+- [√] style Lint 
 - [√] commit lint
 
 ### 样式配置
