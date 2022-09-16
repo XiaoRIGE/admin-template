@@ -34,27 +34,27 @@
 
 ### 主要用到的库
 
-- [√] vue2（2.7.10） + vue-router + vuex + Vuetify + mdi/js（materialdesign icons）+SASS
+- [×] vue2（2.7.10） + vue-router + piana + Vuetify + mdi/js（materialdesign icons）+SASS
 - [×] http 请求:axios(后期需要调试时再做新增)
-- [√] ui 库: Vuetify
-- [√] 提交规范:git cz commitizen
-- [√] 版本更改历史: changelog
-- [√] 代码检查:eslint,格式化:prettier(使用eslint-config-prettier处理冲突的规则),提交之前检查与修复：lint-staged
+- [×] ui 库: Vuetify
+- [×] 提交规范:git cz commitizen
+- [×] 版本更改历史: changelog
+- [×] 代码检查:eslint,格式化:prettier(使用eslint-config-prettier处理冲突的规则),提交之前检查与修复：lint-staged
 - [×] webpack 插件:style-resources-loader（全局 less）webpack-bundle-analyzer（包分析工具） splitChunks（代码分离）
 
 ### Lint 配置
 
-- [√] eslint
-- [√] prettier
-- [√] style Lint 
-- [√] commit lint
+- [×] eslint
+- [×] prettier
+- [×] style Lint 
+- [×] commit lint
 
 ### 样式配置
 
 > 均通过在 vue-cli 中配置 webpack 实现.
 
 - [x] 自动注入全局样式
-- [x] 配置全局 less 变量
+- [x] 配置全局 sass 变量
 - [x] 支持自定义 UI 库的主题颜色
 
 ### 网络请求
@@ -74,19 +74,19 @@
 - [x] 配置 webpack,分离开发/测试/生产环境配置.
 - [x] 添加 webpack 常用插件,优化打包配置.
 - [x] 根据环境配置 vue-cli 环境变量(环境相关)
-- [√] 增加编辑器配置
+- [x] 增加编辑器配置
 
 ### 开发工具
 
-- [√] eslint 代码检查,配置 prettier 格式化工具,使检查规则和格式化规则一致
-- [√] 新增提交规范 git cz commitizen,统一代码提交规范
+- [x] eslint 代码检查,配置 prettier 格式化工具,使检查规则和格式化规则一致
+- [x] 新增提交规范 git cz commitizen,统一代码提交规范
 
 ### 文档
 
-- [√] 在提交规范的基础上,增加版本更改历史,自动生成 changelog
+- [x] 在提交规范的基础上,增加版本更改历史,自动生成 changelog
 
 ### 文件夹结构
-
+```
 ├── .vscode
 │   ├── setting.json                               -> 格式化配置
 │   ├── components.code-snippets                   -> 代码片段 for components（todo）
@@ -146,6 +146,7 @@
 ├── package.json                                   -> Package json
 ├── README.md                                      -> README
 └── vue.config.js                                  -> 打包配置文件
+```
 
 ## What's Included 📦
 
