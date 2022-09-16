@@ -28,14 +28,13 @@ module.exports = {
         .use('sass-loader')
         .tap((opt) => mergeSassVariables(opt, "'@/styles/variables.scss';"))
     })
-
     config.optimization.splitChunks({
       chunks: 'async',
-      minSize: 30000, // 将要被分包的chunks，如果压缩前体积不足20k，将不会被拆包
+      minSize: 30000, // 将要被分包的chunks，如果压缩前体积不足30k，将不会被拆包
       maxSize: 0,
       minChunks: 1, // 某个chunks被多次引用，如果这个引用次数小于某个值，将不会被拆包
-      maxAsyncRequests: 5,
-      maxInitialRequests: 3,
+      maxAsyncRequests: 5, // 表示按需加载文件时，并行请求的最大数目。默认为5。
+      maxInitialRequests: 3, // 表示加载入口文件时，并行请求的最大数目。默认为3
       automaticNameDelimiter: '~',
       name: true,
       cacheGroups: {
