@@ -43,51 +43,11 @@ const routes = [
   },
 
   {
-    path: '/typography',
-    name: 'typography',
-    component: () => import('@/views/typography/Typography.vue'),
-  },
-  {
-    path: '/icons',
-    name: 'icons',
-    component: () => import('@/views/icons/Icons.vue'),
-  },
-  {
-    path: '/cards',
-    name: 'cards',
-    component: () => import('@/views/cards/Card.vue'),
-  },
-  {
-    path: '/simple-table',
-    name: 'simple-table',
-    component: () => import('@/views/simple-table/SimpleTable.vue'),
-  },
-  {
-    path: '/form-layouts',
-    name: 'form-layouts',
-    component: () => import('@/views/form-layouts/FormLayouts.vue'),
-  },
-  {
-    path: '/pages/account-settings',
-    name: 'PagesAccountSettings',
-    component: () =>
-      import('@/views/pages/account-settings/AccountSettings.vue'),
-  },
-  {
     path: '/pages/login',
     name: 'pages-login',
     component: () => import('@/views/pages/Login.vue'),
     meta: {
       layout: 'blank', // 标志是否需要加载左侧布局
-    },
-  },
-
-  {
-    path: '/pages/register',
-    name: 'pages-register',
-    component: () => import('@/views/pages/Register.vue'),
-    meta: {
-      layout: 'blank',
     },
   },
   {

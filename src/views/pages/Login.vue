@@ -112,7 +112,6 @@
 </template>
 
 <script>
-// eslint-disable-next-line object-curly-newline
 import {
   mdiFacebook,
   mdiTwitter,

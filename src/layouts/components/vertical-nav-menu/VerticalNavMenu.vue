@@ -36,11 +36,6 @@
         :to="{ name: 'dashboard' }"
         :icon="icons.mdiHomeOutline"
       ></nav-menu-link>
-      <nav-menu-link
-        title="Account Settings"
-        :to="{ name: 'PagesAccountSettings' }"
-        :icon="icons.mdiAccountCogOutline"
-      ></nav-menu-link>
 
       <nav-menu-group title="forum mgmt." :icon="icons.mdiFileOutline">
         <nav-menu-link
@@ -72,42 +67,11 @@
           target="_blank"
         ></nav-menu-link>
         <nav-menu-link
-          title="Register"
-          :to="{ name: 'pages-register' }"
-          target="_blank"
-        ></nav-menu-link>
-        <nav-menu-link
           title="Error"
           :to="{ name: 'error-404' }"
           target="_blank"
         ></nav-menu-link>
       </nav-menu-group>
-
-      <nav-menu-link
-        title="Typography"
-        :to="{ name: 'typography' }"
-        :icon="icons.mdiAlphaTBoxOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Icons"
-        :to="{ name: 'icons' }"
-        :icon="icons.mdiEyeOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Cards"
-        :to="{ name: 'cards' }"
-        :icon="icons.mdiCreditCardOutline"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Tables"
-        :to="{ name: 'simple-table' }"
-        :icon="icons.mdiTable"
-      ></nav-menu-link>
-      <nav-menu-link
-        title="Form Layouts"
-        :to="{ name: 'form-layouts' }"
-        :icon="icons.mdiFormSelect"
-      ></nav-menu-link>
     </v-list>
   </v-navigation-drawer>
 </template>
