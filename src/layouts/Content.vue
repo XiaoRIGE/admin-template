@@ -4,7 +4,8 @@
       :is-drawer-open.sync="isDrawerOpen"
       :is-mini-panel.sync="isMiniPanel"
     ></vertical-nav-menu>
-    <v-app-bar app absolute flat color="#fff">
+    <!-- flat -->
+    <v-app-bar app absolute color="#fff">
       <div class="boxed-container w-full">
         <div class="d-flex align-center mx-6">
           <!-- Left Content -->

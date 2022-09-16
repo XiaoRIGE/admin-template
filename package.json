@@ -21,6 +21,7 @@
     "@vuetify/cli-plugin-utils": "^0.0.9",
     "apexcharts": "^3.27.3",
     "core-js": "^3.6.5",
+    "pinia": "^2.0.22",
     "tinymce": "^6.2.0",
     "vue": "2.7.10",
     "vue-apexcharts": "^1.6.2",

@@ -24,6 +24,8 @@ module.exports = {
     // // 要求 require() 出现在顶层模块作用域中
     'global-require': 'off',
 
+    'no-plusplus': ['off', { allowForLoopAfterthoughts: true }],
+
     'no-param-reassign': [
       'off',
       {
