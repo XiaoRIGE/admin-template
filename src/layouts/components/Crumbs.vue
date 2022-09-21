@@ -4,7 +4,6 @@
     <div class="horizontal-container">
       <div ref="scroll" class="scroll-wrapper">
         <div class="scroll-content">
-          
           <v-tabs
             v-model="current"
             background-color="#fff"
@@ -12,19 +11,22 @@
             center-active
             show-arrows
           >
-          <v-tab v-for="(tab,index) in tabList" :key="tab.fullPath"  
-                  @click="changeMenu(tab)">
-                  <span>
-                    {{ tab.label }}
-111
-                  </span>
-                  <img
-              v-show="tabList.length > 1"
-              class="close-icon"
-              src="@/assets/images/svg/close.svg"
-              @click="handleClose(tab, index)"
-            />
-                </v-tab>
+            <v-tab
+              v-for="(tab, index) in tabList"
+              :key="tab.fullPath"
+              :ripple="false"
+              @click="changeMenu(tab)"
+            >
+              <span>
+                {{ tab.label }}
+              </span>
+              <img
+                v-show="tabList.length > 1"
+                class="close-icon"
+                src="@/assets/images/svg/close.svg"
+                @click="handleClose(tab, index)"
+              />
+            </v-tab>
           </v-tabs>
         </div>
       </div>
@@ -33,7 +35,7 @@
 </template>
 
 <script>
-import { computed, watch,ref } from 'vue'
+import { computed, watch, ref } from 'vue'
 import { useAppStore } from '@/store/app'
 import { useRouter } from '@/utils'
 
@@ -147,7 +149,9 @@ export default {
       () => route.value,
       (val) => {
         selectMenu(val)
-        const index = tabList.value.findIndex(item=>item.name === activeName.value)
+        const index = tabList.value.findIndex(
+          (item) => item.name === activeName.value
+        )
         current.value = index
       }
     )
@@ -160,7 +164,7 @@ export default {
       selectMenu,
       changeMenu,
       handleClose,
-      current
+      current,
     }
   },
 }
@@ -207,5 +211,14 @@ export default {
   width: 18px;
   height: 18px;
   color: #767676;
+}
+:deep(.v-tab) {
+  &:hover {
+    background-color: transparent;
+    // color: aqua;
+  }
+  &::before {
+    background-color: transparent;
+  }
 }
 </style>
