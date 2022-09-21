@@ -84,11 +84,7 @@ export default {
         href: 'forum/ugc-list',
       },
     ]
-    const showBreadcrumb = computed(() => {
-      console.log(!route.value.meta?.hideBreadcrumbs)
-
-      return !route.value.meta?.hideBreadcrumbs
-    })
+    const showBreadcrumb = computed(() => !route.value.meta?.hideBreadcrumbs)
 
     return {
       isDrawerOpen,

@@ -32,9 +32,11 @@
 @include theme(v-application) using ($material) {
   color: map-deep-get($material, 'text', 'secondary') !important;
 }
+
 @include theme(v-card) using ($material) {
   color: map-deep-get($material, 'text', 'secondary') !important;
 }
+
 @include theme(v-sheet) using ($material) {
   color: map-deep-get($material, 'text', 'secondary') !important;
 
@@ -109,10 +111,8 @@ button {
 @include app-elevation('v-color-picker', 2);
 
 // Color Picker Preview
-@include app-elevation(
-  'v-color-picker__preview:not(.v-slider--disabled) .v-slider__thumb',
-  3
-);
+@include app-elevation('v-color-picker__preview:not(.v-slider--disabled) .v-slider__thumb',
+  3);
 
 // Dialog
 @include app-elevation('v-dialog', $dialog-elevation);
@@ -125,15 +125,11 @@ button {
 @include app-elevation('v-menu__content.theme--dark', 9);
 
 // Navigation Drawer
-@include app-elevation(
-  'v-navigation-drawer--is-mobile:not(.v-navigation-drawer--close)',
-  $navigation-drawer-mobile-temporary-elevation
-);
+@include app-elevation('v-navigation-drawer--is-mobile:not(.v-navigation-drawer--close)',
+  $navigation-drawer-mobile-temporary-elevation);
 
-@include app-elevation(
-  'v-navigation-drawer--temporary:not(.v-navigation-drawer--close)',
-  $navigation-drawer-mobile-temporary-elevation
-);
+@include app-elevation('v-navigation-drawer--temporary:not(.v-navigation-drawer--close)',
+  $navigation-drawer-mobile-temporary-elevation);
 
 // Pagination
 @include app-elevation('v-pagination__item', 2);
@@ -145,16 +141,12 @@ button {
 @include app-elevation('v-stepper__content', $stepper-header-elevation);
 
 // VSwitch
-@include app-elevation(
-  'v-input--switch:not(v-input--switch--flat):not(v-input--switch--inset) .v-input--switch__thumb',
-  $switch-thumb-elevation
-);
+@include app-elevation('v-input--switch:not(v-input--switch--flat):not(v-input--switch--inset) .v-input--switch__thumb',
+  $switch-thumb-elevation);
 
 // VTextField
-@include app-elevation(
-  'v-text-field.v-text-field--solo:not(.v-text-field--solo-flat) > .v-input__control > .v-input__slot',
-  2
-);
+@include app-elevation('v-text-field.v-text-field--solo:not(.v-text-field--solo-flat) > .v-input__control > .v-input__slot',
+  2);
 
 // VTimeline
 @include app-elevation('v-timeline-item__dot', 1);
@@ -174,54 +166,38 @@ button {
 //
 
 // Alert
-@include app-elevation(
-  'v-sheet.v-alert:not(.v-sheet--outlined)',
-  $alert-elevation
-);
+@include app-elevation('v-sheet.v-alert:not(.v-sheet--outlined)',
+  $alert-elevation);
 
 // VAppBar
-@include app-elevation(
-  'v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined)',
-  $app-bar-elevation
-);
+@include app-elevation('v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined)',
+  $app-bar-elevation);
 
 // VBanner
-@include app-elevation(
-  'v-sheet.v-banner:not(.v-sheet--outlined)',
+@include app-elevation('v-sheet.v-banner:not(.v-sheet--outlined)',
   $banner-elevation,
-  true
-);
+  true);
 
 // VCard
-@include app-elevation(
-  'v-sheet.v-card:not(.v-sheet--outlined)',
-  $card-elevation
-);
+@include app-elevation('v-sheet.v-card:not(.v-sheet--outlined)',
+  $card-elevation);
 
 // VFooter
-@include app-elevation(
-  'v-sheet.v-footer:not(.v-sheet--outlined)',
-  $footer-elevation
-);
+@include app-elevation('v-sheet.v-footer:not(.v-sheet--outlined)',
+  $footer-elevation);
 
 // VList
-@include app-elevation(
-  'v-sheet.v-list:not(.v-sheet--outlined)',
-  $list-elevation
-);
+@include app-elevation('v-sheet.v-list:not(.v-sheet--outlined)',
+  $list-elevation);
 
 // VSnackbar
-@include app-elevation(
-  'v-sheet.v-snack__wrapper:not(.v-sheet--outlined)',
+@include app-elevation('v-sheet.v-snack__wrapper:not(.v-sheet--outlined)',
   $snackbar-elevation,
-  true
-);
+  true);
 
 // VToolbar
-@include app-elevation(
-  'v-sheet.v-toolbar:not(.v-sheet--outlined)',
-  $toolbar-elevation
-);
+@include app-elevation('v-sheet.v-toolbar:not(.v-sheet--outlined)',
+  $toolbar-elevation);
 
 //* ——— /shadows —————————————————— //
 
@@ -245,7 +221,8 @@ button {
     padding-top: $card-spacer;
     padding-bottom: $card-spacer;
   }
-  .v-card__title ~ .v-card__title {
+
+  .v-card__title~.v-card__title {
     padding-top: $card-spacer-content;
   }
 
@@ -256,9 +233,10 @@ button {
 
     @at-root {
       .v-card {
-        > .v-card__subtitle:first-child,
-        > .v-card__text:first-child,
-        > .v-card__actions:first-child {
+
+        >.v-card__subtitle:first-child,
+        >.v-card__text:first-child,
+        >.v-card__actions:first-child {
           padding-top: $card-spacer;
         }
       }
@@ -269,7 +247,8 @@ button {
     }
   }
 
-  .v-divider + {
+  .v-divider+ {
+
     .v-card__subtitle,
     .v-card__text,
     .v-card__actions {
@@ -280,6 +259,7 @@ button {
   .v-card__actions {
     &.dense {
       padding: 0 calc(#{$card-spacer} - 8px) calc(#{$card-spacer} - 8px);
+
       .v-btn {
         &:not(.v-btn--icon) {
           min-width: 68px;
@@ -301,6 +281,7 @@ button {
   .v-badge__badge {
     height: 10px !important;
     width: 10px !important;
+
     &::after {
       border-width: 2px !important;
     }
@@ -309,12 +290,14 @@ button {
 
 // Vuetify Fix: Calendar default color should be primary but they add accent class
 .v-date-picker-table {
+
   .v-date-picker-table__current,
   .v-btn--active {
     &.accent {
       background-color: var(--v-primary-base) !important;
       border-color: var(--v-primary-base) !important;
     }
+
     &.accent--text {
       color: var(--v-primary-base) !important;
       caret-color: var(--v-primary-base) !important;
@@ -342,6 +325,7 @@ button {
       border-color: var(--v-primary-base) !important;
     }
   }
+
   .v-time-picker-clock__item--active {
     &.accent {
       background-color: var(--v-primary-base) !important;
@@ -363,7 +347,7 @@ button {
 .v-expansion-panels {
   &.v-expansion-panels--focusable {
     .v-expansion-panel--active {
-      > .v-expansion-panel-header {
+      >.v-expansion-panel-header {
         min-height: unset;
       }
     }
@@ -392,8 +376,8 @@ button {
 
 // Add some space between divider and buttons
 .v-dialog {
-  .v-divider + .v-card__actions {
-    padding-top: $card-spacer-content !important;
+  .v-divider+.v-card__actions {
+    padding-top: $card-spacer-content  !important;
   }
 }
 
@@ -403,6 +387,7 @@ button {
 
 // ? We have to use various selectors because `!important` isn't working
 .v-application[class*='theme'] {
+
   .v-pagination__item,
   .v-pagination__navigation {
     box-shadow: none !important;
@@ -410,13 +395,12 @@ button {
 }
 
 @include theme(v-pagination) using ($material) {
+
   .v-pagination__item,
   .v-pagination__navigation {
     &:hover {
-      background-color: rgba(
-        map-get($material, 'primary-shade'),
-        map-deep-get($material, 'states', 'hover')
-      );
+      background-color: rgba(map-get($material, 'primary-shade'),
+          map-deep-get($material, 'states', 'hover'));
     }
   }
 }
@@ -441,7 +425,7 @@ button {
 
 // ? Reason: Textarea hover underline color is too dark
 @include theme(v-text-field) using ($material) {
-  &:not(.v-input--has-state):hover > .v-input__control > .v-input__slot:before {
+  &:not(.v-input--has-state):hover>.v-input__control>.v-input__slot:before {
     border-color: rgba(map-get($material, 'primary-shade'), 0.28) !important;
   }
 }
@@ -465,6 +449,7 @@ button {
 
 .v-application {
   .v-btn:not(.v-btn--outlined) {
+
     &.primary,
     &.secondary,
     &.accent,
@@ -487,7 +472,9 @@ $btn-custom-heights: (
 
 .v-btn {
   &:not(.v-btn--round) {
-    @each $name, $height in $btn-custom-heights {
+
+    @each $name,
+    $height in $btn-custom-heights {
       &.v-size--#{$name} {
         height: #{$height}px !important;
         // min-width: #{round($size * 1.777777777777778)}px // default ratio
@@ -497,7 +484,9 @@ $btn-custom-heights: (
 }
 
 .v-btn--icon {
-  @each $name, $height in $btn-custom-heights {
+
+  @each $name,
+  $height in $btn-custom-heights {
     &.v-size--#{$name} {
       height: #{$height}px !important;
       width: #{$height}px !important;
@@ -505,9 +494,9 @@ $btn-custom-heights: (
   }
 }
 
-@include app-elevation(v-btn--is-elevated, 3, !important);
-@include app-elevation('v-btn--is-elevated:hover', 4, !important);
-@include app-elevation('v-btn--is-elevated:active', 2, !important);
+@include app-elevation(v-btn--is-elevated, 3,  !important);
+@include app-elevation('v-btn--is-elevated:hover', 4,  !important);
+@include app-elevation('v-btn--is-elevated:active', 2,  !important);
 
 //
 //* ——— Date Picker ——————————————————
@@ -515,6 +504,7 @@ $btn-custom-heights: (
 
 @at-root .v-application--wrap {
   @include theme(v-picker) using ($material) {
+
     // ? `.v-application--wrap` is used to make sure pickers shown in/from dialog/input don't have border.
     .v-picker__body {
       border: 1px solid rgba(map-deep-get($material, 'primary-shade'), 0.22);
@@ -522,12 +512,9 @@ $btn-custom-heights: (
   }
 }
 
-@include theme-diff(
-    v-picker,
-    map-get($shades, 'white'),
-    map-deep-get($material-dark, 'background')
-  )
-  using ($property-value) {
+@include theme-diff(v-picker,
+  map-get($shades, 'white'),
+  map-deep-get($material-dark, 'background')) using ($property-value) {
   .v-picker__actions {
     background-color: $property-value;
   }
@@ -544,9 +531,11 @@ $btn-custom-heights: (
     height: 20px;
     padding: 0 8px;
   }
+
   .v-chip__close svg {
     opacity: 0.38;
   }
+
   &:not(.v-chip-light-bg):not(.v-chip--no-color):not(.v-chip--outlined) {
     color: #fff !important;
   }
@@ -563,8 +552,7 @@ $btn-custom-heights: (
   }
 }
 
-@include theme-diff(v-snack__wrapper, #5e5669, map-get($shades, 'white')) using
-  ($property-value) {
+@include theme-diff(v-snack__wrapper, #5e5669, map-get($shades, 'white')) using ($property-value) {
   &:not([class*='--text']) {
     .v-snack__content {
       color: $property-value;
@@ -614,6 +602,7 @@ $btn-custom-heights: (
 @if $customize-form-icons {
   .v-input {
     &.v-input--dense {
+
       .v-input__prepend-inner,
       .v-input__append-inner {
         .v-input__icon {
@@ -625,15 +614,18 @@ $btn-custom-heights: (
         }
       }
     }
+
     .v-input__prepend-inner,
     .v-input__append-inner {
       .v-input__icon {
         .v-icon {
           transform-origin: 10px;
+
           .v-icon__svg {
             @include ltr() {
               margin-right: 10px;
             }
+
             @include rtl() {
               margin-left: 10px;
             }
@@ -670,16 +662,14 @@ $btn-custom-heights: (
 //* ——— Input ——————————————————
 //
 
-@include theme-diff(
-    v-input,
-    #fff,
-    map-deep-get($material-light, 'text', 'secondary')
-  )
-  using ($value) {
+@include theme-diff(v-input,
+  #fff,
+  map-deep-get($material-light, 'text', 'secondary')) using ($value) {
   &.v-text-field--solo-inverted.v-input--is-focused {
+
     input,
     textarea {
-      color: $value !important;
+      color: $value  !important;
     }
   }
 }
@@ -696,7 +686,7 @@ $btn-custom-heights: (
 //* ——— Tabs ——————————————————
 //
 
-@include app-elevation('v-tabs:not(.v-tabs--vertical)', 3, true);
+// @include app-elevation('v-tabs:not(.v-tabs--vertical)', 3, true);
 
 // tabs shadow
 .v-tabs:not(.v-tabs--vertical) {
@@ -740,6 +730,7 @@ $btn-custom-heights: (
       @include rtl() {
         margin-right: 14px;
       }
+
       .v-input__append-inner {
         align-self: flex-start;
       }
@@ -747,13 +738,17 @@ $btn-custom-heights: (
       .v-select {
         margin-bottom: 6px !important;
         margin-top: 8px !important;
+
         @include ltr() {
           margin-left: 6px;
         }
+
         @include rtl() {
           margin-right: 6px;
         }
-        > .v-input__control > .v-input__slot {
+
+        >.v-input__control>.v-input__slot {
+
           &::before,
           &::after {
             display: none;
@@ -766,6 +761,7 @@ $btn-custom-heights: (
       @include ltr() {
         margin-left: auto;
       }
+
       @include rtl() {
         margin-right: auto;
       }
@@ -773,7 +769,7 @@ $btn-custom-heights: (
   }
 
   // remove box shadow from expanded content
-  > .v-data-table__wrapper {
+  >.v-data-table__wrapper {
     tbody {
       tr.v-data-table__expanded__content {
         box-shadow: none !important;
@@ -787,6 +783,7 @@ $btn-custom-heights: (
     color: map-deep-get($material, 'text', 'primary') !important;
     border-top: thin solid map-deep-get($material, 'dividers');
   }
+
   td {
     color: map-deep-get($material, 'text', 'secondary') !important;
   }
@@ -797,9 +794,11 @@ $btn-custom-heights: (
     .v-data-footer {
       .v-data-footer__select {
         min-width: 100%;
+
         @include ltr() {
           margin-left: 0;
         }
+
         @include rtl() {
           margin-right: 0;
         }
@@ -810,27 +809,27 @@ $btn-custom-heights: (
 
 // Browser Autofill styles
 .v-application.theme--light {
+
   input:-webkit-autofill,
   textarea:-webkit-autofill,
   select:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px map-deep-get($material-light, 'cards')
-      inset !important;
-    -webkit-text-fill-color: map-deep-get(
-      $material-light,
-      'text',
-      'secondary'
-    ) !important;
+    -webkit-box-shadow: 0 0 0 1000px map-deep-get($material-light, 'cards') inset !important;
+    -webkit-text-fill-color: map-deep-get($material-light,
+        'text',
+        'secondary'
+      ) !important;
   }
 }
+
 .v-application.theme--dark {
+
   input:-webkit-autofill,
   textarea:-webkit-autofill,
   select:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 1000px map-deep-get($material-dark, 'cards') inset !important;
-    -webkit-text-fill-color: map-deep-get(
-      $material-dark,
-      'text',
-      'secondary'
-    ) !important;
+    -webkit-text-fill-color: map-deep-get($material-dark,
+        'text',
+        'secondary'
+      ) !important;
   }
 }

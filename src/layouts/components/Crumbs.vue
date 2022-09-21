@@ -4,24 +4,28 @@
     <div class="horizontal-container">
       <div ref="scroll" class="scroll-wrapper">
         <div class="scroll-content">
-          <!-- todo 处理数量超出时样式 -->
-          <div
-            v-for="(tab, index) in tabList"
-            :key="tab.fullPath"
-            class="tab-link-item cursor"
-            :class="activeName === tab.name ? 'isActive' : ''"
-            @close="handleClose(tab, index)"
-            @click="changeMenu(tab)"
+          
+          <v-tabs
+            v-model="current"
+            background-color="#fff"
+            color="#1976D2"
+            center-active
+            show-arrows
           >
-            <span class="tab-title">{{ tab.label }}</span>
-            <!-- <span class="close-icon" @click="handleClose(tab, index)">X</span> -->
-            <img
+          <v-tab v-for="(tab,index) in tabList" :key="tab.fullPath"  
+                  @click="changeMenu(tab)">
+                  <span>
+                    {{ tab.label }}
+111
+                  </span>
+                  <img
               v-show="tabList.length > 1"
               class="close-icon"
               src="@/assets/images/svg/close.svg"
               @click="handleClose(tab, index)"
             />
-          </div>
+                </v-tab>
+          </v-tabs>
         </div>
       </div>
     </div>
@@ -29,7 +33,7 @@
 </template>
 
 <script>
-import { computed, watch } from 'vue'
+import { computed, watch,ref } from 'vue'
 import { useAppStore } from '@/store/app'
 import { useRouter } from '@/utils'
 
@@ -137,11 +141,14 @@ export default {
       }
     }
 
+    const current = ref('')
+
     watch(
       () => route.value,
       (val) => {
-        console.log('路由改变')
         selectMenu(val)
+        const index = tabList.value.findIndex(item=>item.name === activeName.value)
+        current.value = index
       }
     )
 
@@ -153,6 +160,7 @@ export default {
       selectMenu,
       changeMenu,
       handleClose,
+      current
     }
   },
 }

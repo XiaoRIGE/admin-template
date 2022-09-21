@@ -16,6 +16,7 @@ export default new Vuetify({
       customProperties: true, // 启用 customProperties 也会为每个主题颜色生成一个 css变量
       variations: false,
     },
+    // theme: { disable: true },
     themes: {
       // 自定义主题色
       light: {
