@@ -1,0 +1,24 @@
+{
+	"Print to console": {
+		"prefix": "v3",
+		"body": [
+			"<template>",
+			"  <div class=\"$1\">$3</div>",
+			"</template>",
+			"<script>",
+			"export default {",
+			"  name: '$2',",
+			"  components: {},",
+			"  props: {},",
+			"  emits: [],",
+			"  setup() {",
+			"    return {}",
+			"  },",
+			"}",
+			"</script>\n",
+			"<style lang=\"scss\" scoped>\n",
+			"</style>"
+		],
+		"description": "Log output to console"
+	}
+}

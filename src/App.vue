@@ -39,3 +39,10 @@ export default {
   },
 }
 </script>
+<style>
+@import './assets/font/font.css';
+#app {
+  font-family: 'Daimler-CS';
+  font-weight: 400;
+}
+</style>

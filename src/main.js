@@ -1,15 +1,14 @@
-// import '@/plugins/index'
+import pinia from '@/plugins/index'
 import '@/styles/styles.scss'
 import Vue from 'vue'
-import { createPinia, PiniaVuePlugin } from 'pinia'
+import Directive from '@/directives'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router'
 
-Vue.config.productionTip = false
+Vue.use(Directive)
 
-Vue.use(PiniaVuePlugin)
-const pinia = createPinia()
+Vue.config.productionTip = false
 
 new Vue({
   router,

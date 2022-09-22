@@ -1,33 +1,44 @@
-<!-- crumbs.vue -->
 <template>
-  <div class="tags">
-    <div class="horizontal-container">
-      <div ref="scroll" class="scroll-wrapper">
-        <div class="scroll-content">
-          <v-tabs
-            v-model="current"
-            background-color="#fff"
-            color="#1976D2"
-            center-active
-            show-arrows
+  <div class="horizontal-container">
+    <div ref="scroll" class="scroll-wrapper">
+      <div class="scroll-content" transition="v-fab-transition">
+        <!-- <v-tabs
+          v-model="current"
+          background-color="#fff"
+          color="#1976D2"
+          center-active
+          show-arrows
+        >
+          <v-tab
+            v-for="(tab, index) in tabList"
+            :key="tab.fullPath"
+            @click="changeMenu(tab)"
           >
-            <v-tab
-              v-for="(tab, index) in tabList"
-              :key="tab.fullPath"
-              :ripple="false"
-              @click="changeMenu(tab)"
-            >
-              <span>
-                {{ tab.label }}
-              </span>
-              <img
-                v-show="tabList.length > 1"
-                class="close-icon"
-                src="@/assets/images/svg/close.svg"
-                @click="handleClose(tab, index)"
-              />
-            </v-tab>
-          </v-tabs>
+            <span>{{ tab.label }}</span>
+            <img
+              v-show="tabList.length > 1"
+              class="close-icon ml-2"
+              src="@/assets/images/svg/close.svg"
+              @click="handleClose(tab, index)"
+            />
+          </v-tab>
+        </v-tabs> -->
+        <!-- todo 处理数量超出时样式 -->
+        <div
+          v-for="(tab, index) in tabList"
+          :key="tab.fullPath"
+          class="tab-link-item cursor"
+          :class="activeName === tab.name ? 'isActive' : ''"
+          @close="handleClose(tab, index)"
+          @click="changeMenu(tab)"
+        >
+          <span class="tab-title">{{ tab.label }}</span>
+          <img
+            v-show="tabList.length > 1"
+            class="close-icon"
+            src="@/assets/images/svg/delete.svg"
+            @click="handleClose(tab, index)"
+          />
         </div>
       </div>
     </div>
@@ -149,6 +160,7 @@ export default {
       () => route.value,
       (val) => {
         selectMenu(val)
+
         const index = tabList.value.findIndex(
           (item) => item.name === activeName.value
         )
@@ -159,20 +171,24 @@ export default {
     return {
       activeName,
       tabList,
+      current,
       // catch_components,
       handleCommand,
       selectMenu,
       changeMenu,
       handleClose,
-      current,
     }
   },
 }
 </script>
 <style lang="scss" scoped>
 .horizontal-container {
+  .scroll-wrapper {
+    max-width: calc(100vw - 600px);
+    position: relative;
+  }
   .scroll-content {
-    max-width: calc(100vw - 400px);
+    // max-width: calc(100vw - 400px);
     // overflow-x: auto;
     display: flex;
     flex-wrap: nowrap;
@@ -191,9 +207,14 @@ export default {
     }
     .tab-title {
       margin-right: 10px;
+      color: rgba(0, 0, 0, 0.6);
+      transition: all 0.3s;
     }
     .isActive {
       position: relative;
+      .tab-title {
+        color: #1976d2;
+      }
       &::before {
         content: '';
         display: inline-block;
@@ -208,17 +229,8 @@ export default {
   }
 }
 .close-icon {
-  width: 18px;
-  height: 18px;
-  color: #767676;
-}
-:deep(.v-tab) {
-  &:hover {
-    background-color: transparent;
-    // color: aqua;
-  }
-  &::before {
-    background-color: transparent;
-  }
+  width: 12px;
+  height: 12px;
+  // color: #767676;
 }
 </style>

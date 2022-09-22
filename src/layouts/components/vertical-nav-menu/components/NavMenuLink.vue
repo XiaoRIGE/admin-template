@@ -2,7 +2,7 @@
   <v-list-item
     class="vertical-nav-menu-link"
     v-bind="$attrs"
-    active-class="bg-gradient-primary white--text"
+    active-class=" active-item"
   >
     <v-list-item-icon v-if="showIcon">
       <v-icon :class="{ 'alternate-icon-small': !icon }" class="mx-auto">
@@ -55,6 +55,14 @@ export default {
   &.v-list-item--active {
     box-shadow: 0 5px 10px -4px rgba(94, 86, 105, 0.42);
     @include elevationTransition();
+  }
+}
+.active-item {
+  // color: #4eaffd;
+
+  background: rgba(230, 245, 255, 0.2);
+  .v-list-item__title {
+    color: #4eaffd;
   }
 }
 </style>

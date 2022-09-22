@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 export const useAppStore = defineStore('app', {
   state: () => ({
     count: 0,
-    name: 'Eduardo',
     // 缓存组件页面
     catch_components: [],
 
@@ -100,6 +99,9 @@ export const useAppStore = defineStore('app', {
     changeMenu(val) {
       this.activeName = val
     },
+  },
+  persist: {
+    enabled: true,
   },
 })
 export const useXStore = defineStore('Xname', {})

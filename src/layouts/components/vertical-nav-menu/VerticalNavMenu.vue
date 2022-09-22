@@ -15,7 +15,7 @@
     <div class="vertical-nav-header d-flex items-center ps-6 pe-5 pt-5 pb-2">
       <router-link to="/" class="d-flex align-center text-decoration-none">
         <v-img
-          :src="require('@/assets/images/logos/logo.svg')"
+          :src="require('@/assets/images/svg/logo.svg')"
           max-height="30px"
           max-width="30px"
           alt="logo"
@@ -37,7 +37,7 @@
         :icon="icons.mdiHomeOutline"
       ></nav-menu-link>
 
-      <nav-menu-group title="forum mgmt." :icon="icons.mdiFileOutline">
+      <nav-menu-group title="Forum Mgmt." :icon="icons.mdiFileOutline">
         <nav-menu-link
           title="PGC list"
           :to="{ name: 'PGCList' }"
@@ -59,6 +59,18 @@
           :show-icon="false"
         ></nav-menu-link>
       </nav-menu-group>
+
+      <nav-menu-link
+        title="Tribe Mgmt."
+        :to="{ name: 'test1' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
+
+      <nav-menu-link
+        title="Report Mgmt."
+        :to="{ name: 'test2' }"
+        :icon="icons.mdiHomeOutline"
+      ></nav-menu-link>
 
       <nav-menu-group title="Pages" :icon="icons.mdiFileOutline">
         <nav-menu-link
@@ -145,17 +157,6 @@ export default {
   background-color: map-deep-get($material, 'background');
 }
 
-// .app-navigation-menu {
-//   .v-list-item {
-//     &.vertical-nav-menu-link {
-//       ::v-deep .v-list-item__icon {
-//         .v-icon {
-//           transition: none !important;
-//         }
-//       }
-//     }
-//   }
-// }
 .app-navigation-menu {
   .v-list-item {
     &.vertical-nav-menu-link {
@@ -187,30 +188,14 @@ export default {
   .v-list-item > .v-ripple__container {
     border-bottom-right-radius: 0 !important;
     border-top-right-radius: 0 !important;
+    border-radius: 4px !important;
   }
 }
-:deep(.v-list-item--active) {
-  background-color: rgba(230, 245, 255, 0.2);
+:deep(.v-list-item) {
+  color: #dbdbdb !important;
 }
+
 :deep(.pr-5) {
   padding: 0 8px !important;
 }
-// ::v-deep .v-list.v-sheet--shaped .v-list-item {
-//   border-bottom-right-radius: 0 !important;
-//   border-top-right-radius: 0 !important;
-// }
-// ::v-deep .v-list.v-sheet--shaped .v-list-item::before {
-//   border-bottom-right-radius: 0 !important;
-//   border-top-right-radius: 0 !important;
-// }
-// ::v-deep .v-list.v-sheet--shaped .v-list-item > .v-ripple__container {
-//   border-bottom-right-radius: 0 !important;
-//   border-top-right-radius: 0 !important;
-// }
-// ::v-deep .pr-5 {
-//   padding: 0 8px !important;
-// }
-// ::v-deep .v-list-item__title {
-//   margin-left: 24px;
-// }
 </style>

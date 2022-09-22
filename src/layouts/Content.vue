@@ -6,25 +6,29 @@
     ></vertical-nav-menu>
     <v-app-bar app absolute color="#fff">
       <div class="boxed-container w-full">
-        <div class="d-flex align-center mx-6">
+        <div class="d-flex align-center justify-sm-space-between mx-6">
           <div class="left-box d-flex align-center">
             <v-app-bar-nav-icon
-              class="d-block me-2"
+              class="d-block"
               @click="isMiniPanel = !isMiniPanel"
             ></v-app-bar-nav-icon>
+            <v-divider class="divider" vertical></v-divider>
             <Crumbs />
           </div>
-
-          <v-spacer></v-spacer>
-          <v-btn icon small class="ms-3">
-            <v-icon>
-              {{ icons.mdiBellOutline }}
-            </v-icon>
-          </v-btn>
-          <app-bar-user-menu></app-bar-user-menu>
+          <div class="right-box">
+            <v-btn icon small class="ms-3">
+              <v-icon>
+                {{ icons.mdiBellOutline }}
+              </v-icon>
+            </v-btn>
+            <app-bar-user-menu></app-bar-user-menu>
+          </div>
         </div>
       </div>
-      <template v-if="showBreadcrumb" v-slot:extension>
+    </v-app-bar>
+
+    <v-main class="main">
+      <!-- <template v-if="showBreadcrumb">
         <v-breadcrumbs :items="breadcrumbItem" class="breadcrumb">
           <template v-slot:item="{ item }">
             <v-breadcrumbs-item :href="item.href" :disabled="item.disabled">
@@ -32,11 +36,8 @@
             </v-breadcrumbs-item>
           </template>
         </v-breadcrumbs>
-      </template>
-    </v-app-bar>
-
-    <v-main>
-      <div class="app-content-container boxed-container pa-6">
+      </template> -->
+      <div class="app-content-container boxed-container pa-4">
         <slot></slot>
       </div>
     </v-main>
@@ -120,13 +121,34 @@ export default {
   // max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  .left-box {
+    .divider {
+      margin-left: 14px;
+      margin-right: 16px;
+    }
+  }
+}
+.app-content-container {
+  // height: calc(100vh - 104px);//有面包屑
+  height: calc(100vh - 64px);
+  overflow: auto;
 }
 
 //reset styles
+:deep(.theme--light.v-application) {
+  background-color: #dddddd;
+}
 :deep(.v-toolbar__extension) {
   background-color: #dddddd;
 }
-:deep(.breadcrumb a) {
-  color: #1a1a1a;
+:deep(.breadcrumb) {
+  a {
+    color: #1a1a1a;
+  }
+}
+:deep(.v-breadcrumbs) {
+  padding-top: 8px;
+  padding-left: 16px;
+  padding-bottom: 0;
 }
 </style>

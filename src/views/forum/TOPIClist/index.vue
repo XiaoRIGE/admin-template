@@ -13,7 +13,7 @@ import Editor from '@tinymce/tinymce-vue'
 import { reactive, ref, watch } from 'vue'
 
 export default {
-  name: 'App',
+  name: 'TOPIClist',
   components: {
     editor: Editor,
   },
@@ -152,7 +152,7 @@ export default {
         'alignright alignjustify | bullist numlist outdent indent | ' +
         'removeformat | help',
 
-      language: 'zh_CN', // todo 语言包下载地址报404
+      language: 'zh_CN', // 语言默认为en_US
 
       a11y_advanced_options: true,
       // 图片上传 视频上传参考 http://tinymce.ax-z.cn/general/upload-images.php

@@ -39,8 +39,9 @@
 - [×] ui 库: Vuetify
 - [×] 提交规范:git cz commitizen
 - [×] 版本更改历史: changelog
+- [×] 数据持久化: pinia-plugin-persist
 - [×] 代码检查:eslint,格式化:prettier(使用eslint-config-prettier处理冲突的规则),提交之前检查与修复：lint-staged
-- [×] webpack 插件:style-resources-loader（全局 less）webpack-bundle-analyzer（包分析工具） splitChunks（代码分离）
+- [×] webpack 插件:webpack-bundle-analyzer（包分析工具） splitChunks（代码分离）
 
 ### Lint 配置
 
@@ -48,7 +49,7 @@
 - [×] prettier
 - [×] style Lint 
 - [×] commit lint
-
+- [×] css name尽量采用BEM规范（模块名 + 元素名 + 修饰器名blockName-elementName__modifierName）
 ### 样式配置
 
 > 均通过在 vue-cli 中配置 webpack 实现.
@@ -65,8 +66,6 @@
 ### 数据状态管理
 
 - [x] 建立应用数据状态管理
-- [x] 编写更加简易读取的 mutation 方法
-- [x] 支持多个模块,以及自动装载模块
 - [x] 支持持久化
 
 ### 配置

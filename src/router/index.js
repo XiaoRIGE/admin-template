@@ -3,6 +3,14 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+const files = require.context('./', true, /\.(js)$/)
+
+const routeArr = []
+files.keys().forEach((key) => {
+  const routeItem = files(key).default
+  if (key !== './index.js') routeArr.push(...routeItem)
+})
+
 const routes = [
   {
     path: '/',
@@ -17,30 +25,7 @@ const routes = [
     },
   },
 
-  // forum
-  {
-    path: '/forum/pgc-list',
-    name: 'PGCList',
-    component: () => import('@/views/forum/PGClist/index.vue'),
-    meta: {
-      hideBreadcrumbs: true,
-    },
-  },
-  {
-    path: '/forum/ugc-list',
-    name: 'UGClist',
-    component: () => import('@/views/forum/UGClist/index.vue'),
-  },
-  {
-    path: '/forum/tag-list',
-    name: 'TAGlist',
-    component: () => import('@/views/forum/TAGlist/index.vue'),
-  },
-  {
-    path: '/forum/topic-list',
-    name: 'TOPIClist',
-    component: () => import('@/views/forum/TOPIClist/index.vue'),
-  },
+  ...routeArr, // 各个模块的路由
 
   {
     path: '/pages/login',
